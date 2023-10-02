@@ -1,2 +1,2 @@
 # wiki
-[exprimenta] Docs for kinya-lang
+[exprimenta] Docs for kin-lang
