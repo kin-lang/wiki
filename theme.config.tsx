@@ -7,7 +7,7 @@ const config = {
   },
   docsRepositoryBase: 'https://github.com/kin-lang/wiki',
   footer: {
-    text: 'Made with 💖 by Murangwa Pacifique.',
+    text: 'Made and Designed with 💖 by Murangwa Pacifique.',
   },
 }
 
