@@ -1,7 +1,5 @@
 const config = {
-  logo: {
-    link: "./src/assets/kin-logo.svg",
-  },
+  logo: <b>Kin</b>,
   project: {
     link: "https://github.com/kin-lang/kin",
   },
