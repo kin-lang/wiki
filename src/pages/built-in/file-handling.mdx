@@ -1,0 +1,64 @@
+# Intro
+
+File Handling is a seamless way to deal and do operations on files, and it is a very important part of any programming language.
+
+**_Kin_** provides `KIN_INYANDIKO` in-built utility to handle file operations.
+
+With **_Kin_** you can easity read, write, append, and delete files.
+
+## Reading Files
+
+By using `KIN_INYANDIKO.soma(path-to-file)` method, you can read the content of a file located in `path-to-file`.
+
+Ex
+
+```Kin
+reka file_content = KIN_INYANDIKO.soma("path-to-file")
+tangaza_amakuru(file_content)
+```
+
+> File Content of the provided file will be printed.
+
+## Writing Files
+
+By using `KIN_INYANDIKO.andika(path-to-file, content)` method, you can write content to a file located in `path-to-file`.
+
+Ex
+
+```Kin
+reka file_content = injiza_amakuru("Enter the content to write to the file: ")
+reka written =  KIN_INYANDIKO.andika("path-to-file", file_content)
+niba (written) {
+  tangaza_amakuru("Content was written to the file")
+} niba_byanze {
+  tangaza_amakuru("Failed to write content to a file at ", path-to-file)
+}
+```
+
+> Content will be written to the provided file.
+> `KIN_INYANDIKO.andika()` method returns a boolean value, `nibyo` if the content is written successfully, `sibyo` otherwise.
+
+## Appending to a File
+
+By using `KIN_INYANDIKO.vugurura(path-to-file, content)` method, you can apeend content to a file located in `path-to-file`.
+
+Ex
+
+```Kin
+reka new_file_content = injiza_amakuru("Enter the content to append to the file: ")
+reka appended =  KIN_INYANDIKO.vugurura("path-to-file", new_file_content)
+niba (appended) {
+  tangaza_amakuru("Content was appended to the file")
+} niba_byanze {
+  tangaza_amakuru("Failed to appended content to a file at ", path-to-file)
+}
+```
+
+> Content will be appended to the provided file.
+> `KIN_INYANDIKO.vugurura()` method returns a boolean value, `nibyo` if the content is appended successfully, `sibyo` otherwise.
+
+## Deleting Files
+
+By using `KIN_INYANDIKO.siba(path-to-file)` method, you can delete a file located at `path-to-file`.
+
+> We advise to check where the operation was successful or not in other to ensure that the operation was completed successfully with desired output.
