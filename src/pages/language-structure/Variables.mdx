@@ -1,0 +1,40 @@
+# Intro
+
+Variables are Containers for Storing Data
+
+**_Kin_** Variables can be declared in 2 ways:
+
+## `reka`
+
+By declaring variables by using `reka` keyword, you can change the value of the variable later in the program.
+
+```Kin
+reka x = value
+```
+
+Variable `x` is declared and assigned a value of `value` but the value can be changed later in the program.
+
+Also, you can declare a variable without assigning a value to it.
+
+```Kin
+reka x;
+```
+
+> In this case, the variable `x` is declared but not assigned a value.
+> **Note**: You have to add semicolon **_(;)_** at the end of the statement.
+
+## `ntahinduka`
+
+By declaring variable by using `ntahinduka` keyword, you can't change the value of the variable later in the program.
+
+```Kin
+ntahinduka x = 10
+```
+
+> You can't change the value of variable x later in the program.
+
+> **Note**: You have to assign a value to a constant variable, so this won't work:
+
+```Kin
+ntahinduka x; # This will throw an error
+```

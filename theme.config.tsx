@@ -1,14 +1,12 @@
-import { DocsThemeConfig } from 'nextra-theme-docs'
-
 const config = {
-  logo: <span>Kin-Lang Docs</span>,
+  logo: "Kin",
   project: {
-    link: 'https://github.com/kin-lang/kin',
+    link: "https://github.com/kin-lang/kin",
   },
-  docsRepositoryBase: 'https://github.com/kin-lang/wiki',
+  docsRepositoryBase: "https://github.com/kin-lang/wiki",
   footer: {
-    text: 'Made and Designed with 💖 by Murangwa Pacifique.',
+    text: "Made and Designed with 💖 by Murangwa Pacifique.",
   },
-}
+};
 
-export default config
+export default config;

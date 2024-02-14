@@ -1,0 +1,81 @@
+# Intro
+
+A **_Kin_** function is a block of code designed to perform a particular task.
+
+A **_Kin_** function is executed when "something" invokes it (calls it).
+
+Ex
+
+```Kin
+porogaramu_ntoya function(a, b) {
+  tanga a * b
+}
+```
+
+## Function Syntax
+
+A **_Kin_** function is defined with the `porogaramu_ntoya` keyword, followed by a name, followed by parentheses ().
+
+Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).
+
+The parentheses may include parameter names separated by commas:
+(parameter1, parameter2, ...)
+
+The code to be executed, by the function, is placed inside curly brackets: {}
+
+```Kin
+porogaramu_ntoya name(parameter1, parameter2, parameter3) {
+  # code to be executed
+}
+```
+
+Function parameters are listed inside the parentheses () in the function definition.
+
+Function arguments are the values received by the function when it is invoked.
+
+Inside the function, the arguments (the parameters) behave as local variables.
+
+## Function Invocation
+
+The code inside the function will execute when "something" invokes (calls) the function:
+
+```Kin
+functionName(argument1, argument2, argument3, ...)
+```
+
+## Function Return
+
+When **_Kin_** reaches a return statement, the function will stop executing.
+
+If the function was invoked from a statement, **_Kin_** will "return" to execute the code after the invoking statement.
+
+Functions often compute a return value. The return value is "returned" back to the "caller":
+
+```Kin
+porogaramu_ntoya myFunction(a, b) {
+# Function returns the product of a and b
+  return a * b;
+}
+
+# Function is called, the return value will end up in x
+reka x = myFunction(4, 3);
+```
+
+> After **return** statement there must be no other statement under it in a function
+
+So this will produce an error
+
+```Kin
+porogaramu_ntoya function(a, b) {
+  tanga a*b
+  tangaza_amakuru("Product is ", a*b)
+}
+```
+
+## Why Functions?
+
+With functions you can reuse code
+
+You can write code that can be used many times.
+
+You can use the same code with different arguments, to produce different results.

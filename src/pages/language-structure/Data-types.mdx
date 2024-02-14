@@ -1,0 +1,153 @@
+# Intro
+
+In programming, data types is an important concept.
+
+To be able to operate on variables, it is important to know something about the type.
+
+Because all variables doesn't have the same type, the operations that can be performed on them are different.
+
+## Kin's Data Types
+
+**_Kin_** has 5 Datatypes:
+
+1. String
+2. Number
+3. Boolean
+4. Null
+5. Object
+
+The Object Datatype
+The object data type can contain:
+
+1. An object
+2. An array
+
+Ex:
+
+```Kin
+# Numbers:
+reka length = 16
+reka weight = 7.5
+
+# Strings:
+reka color = "Yellow"
+reka lastName = "Johnson"
+
+# Booleans
+reka x = nibyo
+reka y = sibyo
+
+# Object:
+ntahinduka person = {firstName:"John", lastName:"Doe"}
+
+# Array object:
+ntahinduka cars = ["Saab", "Volvo", "BMW"]
+```
+
+> **_Note:_** a **_Kin_** variable can hold any type of data.
+
+## Kin Types are Dynamic
+
+**_Kin_** has dynamic types. This means that the same variable can be used to hold different data types:
+
+```Kin
+reka x        # Now x is undefined
+x = 5         # Now x is a Number
+x = "John"   # Now x is a String
+```
+
+## Kin Strings
+
+A string (or a text string) is a series of characters like "John Doe".
+
+Strings are written with quotes.
+
+Ex:
+
+```Kin
+# Sample string:
+reka carName = "Volvo XC60"
+```
+
+> **_Note: _** Only double quotes are supported in kin, so this will produce an error
+
+```Kin
+reka x = 'this is not supported' # This will produce an error
+```
+
+## Kin Numbers
+
+Numbers can be written with or without decimals.
+
+So in **_Kin_** numbers can be either integers or floating point numbers.
+
+Ex:
+
+```Kin
+# With decimals:
+reka x1 = 34.00
+
+# Without decimals:
+reka x2 = 34
+```
+
+> **_Note: _** In **_Kin_**, there is no support for Exponential Notation.
+
+## Kin Booleans (nibyo, sibyo)
+
+Booleans can only have two values: `nibyo` or `sibyo`.
+
+Ex:
+
+```Kin
+reka x = 5
+reka y = 5
+reka z = 6
+(x == y)       # Returns true
+(x == z)       # Returns false
+```
+
+Booleans are often used in conditional testing.
+
+## Kin Arrays
+
+**_Kin_** arrays are written with square brackets.
+
+Array items are separated by commas.
+
+The following code declares (creates) an array called names, containing three items (people's names):
+
+```Kin
+reka names = ["John", "Doe", "Jane"]
+```
+
+Array indexes are zero-based, which means the first item is [0], second is [1], and so on.
+
+So,
+
+```Kin
+names[0] # Returns "John"
+names[1] # Returns "Doe"
+names[2] # Returns "Jane"
+```
+
+## Kin Objects
+
+**_Kin_** objects are written with curly braces {}.
+
+Object properties are written as name:value pairs, separated by commas.
+
+Ex:
+
+```Kin
+ntahinduka person = {firstName:"Bwenge", lastName:"Kana", age:15, eyeColor:"red"}
+```
+
+The object (person) in the example above has 4 properties: firstName, lastName, age, and eyeColor.
+
+We'll discuss more about objects later in these docs.
+
+## Kin Null (ubusa)
+
+This is a special data type that can only have one value: `ubusa`.
+It is used to represent the absence of a value.

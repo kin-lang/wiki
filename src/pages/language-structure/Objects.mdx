@@ -1,0 +1,102 @@
+# Intro
+
+You have already learned that **_Kin_** variables are containers for data values.
+
+This code assigns a simple value (Fiat) to a variable named car:
+
+```Kin
+reka car = "Fiat"
+```
+
+Objects are variables too. But objects can contain many values.
+
+This code assigns many values (Fiat, 500, white) to a variable named car:
+
+```Kin
+const car = {
+  type:"Fiat",
+  model:"500",
+  color:"white"
+}
+```
+
+The values are written as name:value pairs (name and value separated by a colon).
+
+## Object Definition
+
+You define (and create) a **_Kin_** object with an object literal:
+
+```Kin
+reka person = {
+  firstName:"John",
+  lastName:"Doe",
+  age:50,
+  eyeColor:"blue"
+};
+
+# This is the same as:
+reka person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+```
+
+Spaces and line breaks are not important. An object definition can span multiple lines:
+
+## Object Properties
+
+The name:values pairs in **_Kin_** objects are called properties:
+
+## Property | Property Value
+
+firstName | John
+lastName | Doe
+age | 50
+eyeColor | blue
+
+---
+
+## Accessing Object Properties
+
+You can access object properties in two ways:
+
+```Kin
+objectName.propertyName
+```
+
+Or
+
+```Kin
+objectName["propertyName"]
+```
+
+## Object Methods
+
+A method is a function stored as a property.
+
+Ex:
+
+```Kin
+porogaramu_ntoya add (a, b) {
+  tanga a + b
+}
+
+reka obj = {
+  method: add
+}
+```
+
+In this case our object `obj` has a method named `method` which can perform addition of two numbers.
+
+> Noticide that we didn't declare method inside and object? This is because in **_Kin_** we don't support declaring methods inside objects. We can only assign a function to a property of an object.
+
+### Accessing Object Methods
+
+You access an object method with the following syntax:
+
+```Kin
+obj.method()
+```
+
+If you access a method without the () parentheses, it will return the function definition:
+
+```Kin
+reka add = obj.method
+```

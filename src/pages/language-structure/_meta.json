@@ -1,0 +1,15 @@
+{
+  "Input-Output": "Input/Output",
+  "Syntax": "syntax",
+  "Comments": "Comments",
+  "Variables": "Variables",
+  "Operators": "Operators",
+  "Data-types": "Data Types",
+  "Strings": "Strings",
+  "Arrays": "Arrays",
+  "Objects": "Objects",
+  "Functions": "Functions",
+  "Conditions": "Control Statements",
+  "Loops": "Loops",
+  "Scope": "Scope"
+}

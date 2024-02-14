@@ -1,0 +1,64 @@
+# Intro
+
+Strings are for storing text.
+
+Strings are written with double quotes.
+
+Ex
+
+```Kin
+reka x  = "Hello World"
+```
+
+## String Methods
+
+**_Kin_** provides various String manipulation methods, all are provided under `KIN_AMAGAMBO`in-built utility.
+
+### String concationation
+
+You can concatinate strings by using `KIN_AMAGAMBO.huza()` method.
+
+Ex:
+
+```Kin
+reka x = "Hello "
+reka y = "World"
+
+reka z = KIN_AMAGAMBO.huza(x, y)
+tangaza_amakuru(z)
+```
+
+> Output: Hello World
+
+> Note: `KIN_AMAGAMBO.huza()` method can take any number of arguments.
+
+### String Length
+
+You can get the length of a string by using `KIN_AMAGAMBO.ingano()` method.
+
+Ex:
+
+```Kin
+reka ijambo = "Hello World"
+tangaza_amakuru(KIN_AMAGAMBO.ingano(ijambo))
+```
+
+> Output: 11
+
+### Splitting String
+
+You can split a string by using any delimiter by using `KIN_AMAGAMBO.tandukanya()` method.
+
+Ex
+
+```Kin
+reka ijambo = "Hello World"
+reka hello = KIN_AMAGAMBO.tandukanya(ijambo, " ")
+tangaza_amakuru(hello[0])
+```
+
+> Output: Hello
+
+### Upper Case and Lower Case
+
+You can use `KIN_AMAGAMBO.inyuguti_nkuru()` for upper case and `KIN_AMAGAMBO.inyuguti_ntoya()` for lower case.

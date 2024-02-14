@@ -1,0 +1,50 @@
+# Input
+
+_**Kin**_ provides a built-in function `injiza_amakuru()`, this function is used to get information from the user.
+
+## How to
+
+Getting information from user and store them in a variable:
+
+```Kin
+reka x  = injiza_amakuru("Enter the value of x: ")
+```
+
+> This will store the value entered by the user in the variable x.
+
+# Output
+
+_**Kin**_ provides a built-in function `tangaza_amakuru()`, this function is used to write information to the user's screen.
+
+## How to
+
+```Kin
+tangaza_amakuru("This is message will be printed on user's screen")
+```
+
+> This is message will be printed on user's screen
+
+Sometimes you'll need to write multiple things to the screen.
+
+```Kin
+tangaza_amakuru("More ", "than ", "one ", "message ", "can ", "be ", "printed ", "at ", "once.)
+```
+
+> More than one message can be printed at once.
+
+This also works with variables.
+
+```Kin
+reka x = 10
+tangaza_amakuru("The value of x is ", x)
+```
+
+> The value of x is 10
+
+Both `injiza_amakuru()` and `tangaza_amakuru()` can be used at the same time.
+
+```Kin
+tangaza_amakuru("Value of x is: " ,injiza_amakuru("Enter the value of x: "))
+```
+
+> Value of x is: 10

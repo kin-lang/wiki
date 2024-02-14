@@ -1,0 +1,47 @@
+import CodeGroup from "@/components/code-group";
+
+## Installation
+
+Kin is available through npm package manager, you can Install it by:
+
+<CodeGroup>
+  <div className="card rounded-md p-4 hover:shadow-md">
+    <p className="text-gray-700">npm i -g @kin-lang/cli</p>
+  </div>
+  <div className="card rounded-md p-4 hover:shadow-md">
+    <p className="text-gray-700">yarn add -g @kin-lang/cli</p>
+  </div>
+  <div className="card rounded-md p-4 hover:shadow-md">
+    <p className="text-gray-700">pnpm add -g @kin-lang/cli</p>
+  </div>
+</CodeGroup>
+
+> Use `kin --version` to check if **_Kin_** is installed.
+> For **_Linux Distros_** and **_macOS_** users, remember to use **_sudo_**.
+
+## IDE Integrations
+
+We also provided a official extension for Visual Studio Code to enhance your coding experience with Kin.
+
+[Install from VS Code Marketplace](https://github.com/pacifiquem)
+
+## First Program
+
+Create a file with .kin extension, write these codes in order to run hello world.
+
+```kin
+reka name = injiza_amakuru("What's your name? ")
+tangaza_amakuru("Hello, ", name, "!")
+```
+
+Run your codes by navigating where your file is located on your system and run:
+
+```bash
+kin run filename.kin
+```
+
+> Make sure that **Kin** is installed and you're in the collect directory.
+
+## Community
+
+If you have questions or need help, reach out to the community at [GitHub Discussions](https://github.com/kin-lang/kin/discussions).

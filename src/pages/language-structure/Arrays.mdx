@@ -1,0 +1,116 @@
+# Intro
+
+An array is a special variable, which can hold more than one value:
+
+Ex
+
+```Kin
+reka names  = ["Bwenge", "Nyabihu", ]
+```
+
+## Why Use Arrays?
+
+If you have a list of items (a list of car names, for example), storing the cars in single variables could look like this:
+
+```Kin
+reka car1 = "Saab"
+reka car2 = "Volvo"
+reka car3 = "BMW"
+```
+
+However, what if you want to loop through the cars and find a specific one? And what if you had not 3 cars, but 300?
+
+The solution is an array!
+
+An array can hold many values under a single name, and you can access the values by referring to an index number.
+
+## Creating an Array
+
+Using an array literal is the easiest way to create a **_Kin_** Array.
+
+Syntax:
+
+```Kin
+ntahinduka array_name = [item1, item2, ...]
+```
+
+Spaces and line breaks are not important. A declaration can span multiple lines:
+
+```Kin
+ntahinduka cars = [
+  "Saab",
+  "Volvo",
+  "BMW"
+];
+```
+
+You can also create an array, and then provide the elements:
+
+```Kin
+ntahinduka cars = [];
+cars[0]= "Saab";
+cars[1]= "Volvo";
+cars[2]= "BMW";
+```
+
+## Accessing Array Elements
+
+You access an array element by referring to the index number:
+
+```Kin
+ntahinduka cars = ["Saab", "Volvo", "BMW"];
+reka car = cars[0];
+```
+
+> Array indexes start with 0.
+> [0] is the first element. [1] is the second element.
+
+## Changing an Array Element
+
+This statement changes the value of the first element in cars:
+
+```Kin
+reka cars = ["Saab", "Volvo", "BMW"];
+cars[0] = "Opel";
+```
+
+# Array Methods
+
+### Array Length
+
+You can get the length of an array by using `KIN_URUTONDE.ingano()` method.
+
+Ex:
+
+```Kin
+reka ijambo = ["Hello", "World"]
+tangaza_amakuru(KIN_URUTONDE.ingano(ijambo))
+```
+
+> Output: 2
+
+### Array Include
+
+You check if an array include a given value by using `KIN_URUTONDE.ifite()` method.
+
+Ex:
+
+```Kin
+reka ijambo = ["Hello", "World"]
+tangaza_amakuru(KIN_URUTONDE.ifite(ijambo, "Hello"))
+```
+
+> Output: nibyo
+
+### Array join
+
+You join elements of an array to make one word by using `KIN_URUTONDE.kora_ijambo()` method.
+
+Ex:
+
+```Kin
+reka cars = ["Saab", "Volvo", "BMW"];
+tangaza_amakuru(KIN_URUTONDE.kora_ijambo(cars))
+```
+
+> Output: SaabVolvoBMW

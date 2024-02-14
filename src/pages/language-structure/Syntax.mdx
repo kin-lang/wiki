@@ -1,0 +1,37 @@
+# Intro
+
+**_A computer program_** is a list of "instructions" to be "executed" by a computer.
+In a programming language, these programming instructions are called **_statements_**.
+A **_Kin_** program is a list of programming statements.
+
+## Semicolons ;
+
+In most programming languages like C, C++, ... a semicolon is used to terminate a statement.
+In Kin, a semicolon is not required. But there are some use cases where you need to use a semicolon.
+
+- A semicolon is required when you declare a variable but you don't assign a value to it.
+
+```Kin
+reka x; # This will work
+reka x # This will not work
+```
+
+- A semicolon is required when a function returns but there's not expression to return.
+
+```Kin
+porogaramu_ntoya main() {
+    tanga; # This will work
+}
+```
+
+In General a semicolon is used to tell **_Kin_** that there's an ommited statement.
+
+## White Spaces
+
+**_Kin_** ignores multiple spaces. You can add white space to your script to make it more readable.
+The following lines are equivalent:
+
+```Kin
+reka x = 5
+reka x=5
+```
