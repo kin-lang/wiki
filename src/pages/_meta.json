@@ -1,7 +1,6 @@
 {
-    "index": "Kin's Overview",
-    "getting-started": "Getting Started",
-    "language-structure": "Language Structure",
-    "built-in":"Built In",
-    "examples": "Examples"
+  "index": "Kin's Overview",
+  "getting-started": "Getting Started",
+  "language-structure": "Language Structure",
+  "built-in": "Built In"
 }
