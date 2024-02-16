@@ -7,6 +7,11 @@ const config = {
   footer: {
     text: "Made and Designed with 💖 by Murangwa Pacifique.",
   },
+  useNextSeoProps() {
+    return {
+      titleTemplate: '%s – Kin'
+    }
+  }
 };
 
 export default config;
