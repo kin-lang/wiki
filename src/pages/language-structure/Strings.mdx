@@ -63,7 +63,7 @@ tangaza_amakuru(hello[0])
 
 > Output: Hello
 
-> *Note*: This `KIN_AMAGAMBO.tandukanya()` method returns an array, if you try to print it, you'll get this to screen `[Object Object]`, this is becuase `Arrays` are `Objects` in Kin and when ever you try to print the whole `Array` you'll receive `[Object Object]`. You have to work with individual element by now!.
+> _Note_: This `KIN_AMAGAMBO.tandukanya()` method returns an array, if you try to print it, you'll get this to screen `[Object Object]`, this is becuase `Arrays` are `Objects` in Kin and when ever you try to print the whole `Array` you'll receive `[Object Object]`. You have to work with individual element by now!.
 
 ### Upper Case and Lower Case
 
@@ -74,3 +74,36 @@ tangaza_amakuru(hello[0])
 - LowerCase
 
 `KIN_AMAGAMBO.inyuguti_ntoya(string) # This will turn provided string turned into lowercase`
+
+### Getting character
+
+You can get a character at a given index in string by using `KIN_AMAGAMBO.inyuguti(string, characterIndex)` method.
+
+Ex:
+
+```Kin
+reka str = "this is a string"
+reka char = KIN_AMAGAMBO.inyuguti(8) # this will return a.
+tangaza_amakuru(char)
+```
+
+> This will print letter `a` to the console.
+
+## Iterating over String
+
+In **_Kin_**, by the help of `KIN_AMAGAMBO.ingano()` and `KIN_AMAGAMBO.inyuguti()` methods, it's possible to iterate over a stringify.
+
+Here's how
+
+```Kin
+reka str = "a string"
+
+reka i = 0
+
+subiramo_niba(i<KIN_AMAGAMBO.ingano(str)) { # use KIN_AMAGAMBO.ingano() to get string's length and loop utils the length
+  tangaza_amakuru(KIN_AMAGAMBO.inyuguti(str, i)) # Get the character at any index by using KIN_AMAGAMBO.inyuguti() method.
+  i = i + 1
+}
+```
+
+> Output: every letter printed on it's own line.
