@@ -1,6 +1,28 @@
 {
-  "index": "Kin's Overview",
-  "getting-started": "Getting Started",
-  "language-structure": "Language Structure",
-  "built-in": "Built In"
+  "index": {
+    "type": "page",
+    "title": "Kin",
+    "display": "hidden",
+    "theme": {
+      "layout": "raw"
+    }
+  },
+  "docs": {
+    "type": "page",
+    "title": "Documentation"
+  },
+  "editor": {
+    "type": "page",
+    "title": "Playground",
+    "theme": {
+      "typesetting": "article"
+    }
+  },
+  "404": {
+    "type": "page",
+    "theme": {
+      "timestamp": false,
+      "typesetting": "article"
+    }
+  }
 }

@@ -1,0 +1,10 @@
+{
+  "index": "introduction",
+  "getting-started": "Getting Started",
+  "-- Docs": {
+    "type": "separator",
+    "title": "Docs"
+  },
+  "language-structure": "Language Structure",
+  "built-in": "Built In"
+}
