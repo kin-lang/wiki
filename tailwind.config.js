@@ -1,9 +1,10 @@
 import { fontFamily } from "tailwindcss/defaultTheme";
 
 /** @type {import('tailwindcss').Config} */
-export default {
+
+module.exports = {
   content: [
-    "./**/*.{js,jsx,ts,tsx,md,mdx}",
+    './src/**/*.{js,jsx,ts,tsx,md,mdx}'
   ],
   theme: {
     extend: {
@@ -36,7 +37,7 @@ export default {
         accent: {
           DEFAULT: 'hsl(var(--accent))',
           foreground: 'hsl(var(--accent-foreground))'
-        },
+        }, 
         popover: {
           DEFAULT: 'hsl(var(--popover))',
           foreground: 'hsl(var(--popover-foreground))'

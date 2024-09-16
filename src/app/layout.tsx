@@ -1,7 +1,7 @@
+import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { cn } from '@/lib/utils';
-import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Kin - Write computer programs in Kinyarwanda',

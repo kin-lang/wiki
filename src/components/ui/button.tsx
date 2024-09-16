@@ -15,9 +15,10 @@ const Button = forwardRef<HTMLButtonElement, CustomButtonProps>(
       'inline-flex items-center justify-center rounded-md font-medium transition-colors';
     const variantStyles = {
       primary: 'bg-primary text-white hover:bg-primary-dark',
-      secondary: 'bg-secondary text-white hover:bg-secondary-dark',
-      ghost: 'bg-transparent text-primary hover:bg-primary/10',
+      secondary: 'bg-secondary text-black hover:bg-secondary-dark border',
+      ghost: 'bg-transparent text-primary hover:bg-primary/10 border',
     };
+
     const sizeStyles = {
       small: 'px-3 py-1 text-sm',
       medium: 'px-4 py-2 text-base',

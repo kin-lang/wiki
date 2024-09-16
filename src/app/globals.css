@@ -25,6 +25,27 @@
     --ring: 240 5.9% 10%;
     --radius: 0.5rem;
   }
+
+  .dark :root {
+    --background: 240 10% 10%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 15%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 15%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 240 5.9% 70%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 25%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 5.9% 20%;
+    --muted-foreground: 0 0% 98%;
+    --accent: 240 5.9% 30%;
+    --accent-foreground: 0 0% 98%;
+    --border: 240 5.9% 30%;
+    --input: 240 5.9% 25%;
+    --ring: 240 5.9% 70%;
+    --radius: 0.5rem;
+  }
 }
 
 @layer base {
@@ -36,7 +57,12 @@
     @apply bg-background text-foreground font-body;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-heading;
   }
 }
