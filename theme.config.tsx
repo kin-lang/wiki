@@ -26,6 +26,9 @@ const config = {
   toc: {
     backToTop: true,
   },
+  nextThemes: {
+    defaultTheme: 'dark'
+  }
 };
 
 export default config;

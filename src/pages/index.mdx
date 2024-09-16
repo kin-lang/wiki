@@ -1,1 +1,39 @@
-# index
+---
+title: Kin – Write computer programs in Kinyarwanda
+---
+
+import Link from 'next/link';
+import Button from '@/components/ui/button';
+
+export default function Component() {
+  return (
+    <div className='min-h-screen bg-background text-foreground dark:bg-background dark:text-foreground'>
+      <main>
+        <section
+          id='hero'
+          className='flex flex-col items-center px-4 py-16 text-center md:py-24 lg:py-32 md:px-6'
+        >
+          <h1 className='text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl'>
+            Kin: Programming in Kinyarwanda
+          </h1>
+          <p className='max-w-3xl mt-4 text-lg md:text-xl text-muted-foreground'>
+            Kin is a modern, accessible language designed to help Rwandans learn
+            programming in Kinyarwanda, focusing on simplicity and education
+            rather than large-scale development.
+          </p>
+          <div className='flex flex-col gap-4 mt-8 sm:flex-row'>
+            <Link href={'/docs'}>
+              <Button  className='w-full sm:w-auto'>
+                {' '}
+                Documentation{' '}
+              </Button>
+            </Link>
+            <Link href={'/editor'}>
+              <Button variant='secondary' className='w-full sm:w-auto'>Try Kin</Button>
+            </Link>
+          </div>
+        </section>
+      </main>
+    </div>
+  );
+}
