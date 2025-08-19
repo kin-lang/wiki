@@ -13,6 +13,7 @@ In **_Kin_** we have the following conditional statements:
 Use `niba` to specify a block of code to be executed, if a specified condition is true
 Use `nanone_niba` to specify a block of code to be executed, if the same condition is false
 Use `niba_byanze` to specify a new condition to test, if the first condition is false
+Use `gereranya` to specify multiple code blocks to be executed based on different values
 
 ## Niba Statement
 
@@ -51,3 +52,41 @@ niba (condition1) {
   #  block of code to be executed if the condition1 is false and condition2 is false
 }
 ```
+
+## Gereranya Statement (Switch)
+
+Use the `gereranya` statement to perform different actions based on different conditions. The gereranya statement provides a cleaner alternative to multiple `niba_byanze` statements when testing a variable against many values.
+
+```Kin
+gereranya (expression) {
+  usanze value1:
+    # code to execute when expression equals value1
+  usanze value2:
+    # code to execute when expression equals value2
+  usanze value3:
+    # code to execute when expression equals value3
+  ibindi:
+    # code to execute when expression doesn't match any case
+}
+```
+
+> **Note:** Unlike some other languages, Kin's gereranya statement doesn't require explicit break statements. Each case automatically stops execution after its block is completed.
+
+### Example
+
+```Kin
+reka iletere = injiza_amakuru("shyiramo letere nyamuneka:")
+
+gereranya(iletere){
+    usanze "a":
+       reka a = 1
+       reka b = 2
+       tangaza_amakuru(a+b)
+       tangaza_amakuru("Iyi letere ni a")
+    usanze "b":
+       tangaza_amakuru("Iyi letere ni b")
+    ibindi:
+       tangaza_amakuru("Iyi letere ntayo twize") 
+}
+```
+
