@@ -1,0 +1,54 @@
+---
+title: 'Kwinjiza no Gusohora Amakuru'
+---
+
+# Kwinjiza Amakuru (Input)
+
+_**Kin**_ itanga umukoro wubatswe `injiza_amakuru()`, ukoreshwa mu gufata amakuru atangwa n’umukoresha.
+
+## Uko bikorwa
+
+Gufata amakuru atangwa n’umukoresha no kuyabika muri variable:
+
+```Kin
+reka x = injiza_amakuru("Shyiramo agaciro ka x: ")
+```
+
+> Ibi bizabika agaciro umukoresha yashyizemo muri variable x.
+
+# Gusohora Amakuru (Output)
+
+_**Kin**_ itanga umukoro wubatswe `tangaza_amakuru()`, ukoreshwa mu kwandika amakuru ku ishusho y’umukoresha (screen).
+
+## Uko bikorwa
+
+```Kin
+tangaza_amakuru("Ubutumwa buzacapurwa kuri screen y'umukoresha")
+```
+
+> Ubutumwa buzacapurwa kuri screen y'umukoresha
+
+Hari igihe ushobora gushaka kwandika ibintu byinshi icyarimwe kuri screen.
+
+```Kin
+tangaza_amakuru("Birenze ", " kimwe ", "ubutumwa ", "bushobora ", "gucapurwa ", "icyarimwe.")
+```
+
+> Birenze kimwe, ubutumwa bushobora gucapurwa icyarimwe.
+
+Ibi nabyo birakora no ku variables.
+
+```Kin
+reka x = 10
+tangaza_amakuru("Agaciro ka x ni ", x)
+```
+
+> Agaciro ka x ni 10
+
+Umukoro `injiza_amakuru()` na `tangaza_amakuru()` birashobora gukoreshwa icyarimwe.
+
+```Kin
+tangaza_amakuru("Agaciro ka x ni: ", injiza_amakuru("Shyiramo agaciro ka x: "))
+```
+
+> Agaciro ka x ni: 10

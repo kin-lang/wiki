@@ -1,0 +1,69 @@
+---
+title: Gukoresha Dosiye
+description: Gukoresha dosiye muri Kin
+---
+
+# Intangiriro
+
+Gukoresha dosiye ni uburyo bworoshye bwo gukora no kuyobora imirimo kuri dosiye, kandi ni igice cy’ingenzi mu rurimi urwo ari rwo rwose rwa porogaramu.
+
+**_Kin_** itanga `KIN_INYANDIKO` yubatsemo ifasha gukora imirimo ijyanye na dosiye.
+
+Ukoresheje **_Kin_** ushobora gusoma, kwandika, kongeramo, no gusiba dosiye mu buryo bworoshye.
+
+## Gusoma Dosiye
+
+Ukoresheje uburyo `KIN_INYANDIKO.soma(path-to-file)`, ushobora gusoma ibirimo muri dosiye iri aho hantu (`path-to-file`).
+
+Urugero:
+
+```Kin
+reka file_content = KIN_INYANDIKO.soma("path-to-file")
+tangaza_amakuru(file_content)
+```
+
+> Ibirimo bya dosiye watanze bizasohorwa.
+
+## Kwandika muri Dosiye
+
+Ukoresheje uburyo `KIN_INYANDIKO.andika(path-to-file, content)`, ushobora kwandika ibirimo muri dosiye iri aho hantu (`path-to-file`).
+
+Urugero:
+
+```Kin
+reka file_content = injiza_amakuru("Injiza ibirimo ushaka kwandika muri dosiye: ")
+reka written =  KIN_INYANDIKO.andika("path-to-file", file_content)
+niba (written) {
+  tangaza_amakuru("Ibirimo byanditswe muri dosiye")
+} niba_byanze {
+  tangaza_amakuru("Byanze kwandika ibirimo muri dosiye iri ahantu: ", path-to-file)
+}
+```
+
+> Ibirimo bizandikwa muri dosiye watanze.
+> Uburyo `KIN_INYANDIKO.andika()` busubiza agaciro ka **boolean**, `nibyo` niba byanditswe neza, cyangwa `sibyo` niba bitakunze.
+
+## Kongeramo (Append) muri Dosiye
+
+Ukoresheje uburyo `KIN_INYANDIKO.vugurura(path-to-file, content)`, ushobora kongeramo ibindi birimo muri dosiye iri aho hantu (`path-to-file`).
+
+Urugero:
+
+```Kin
+reka new_file_content = injiza_amakuru("Injiza ibirimo ushaka kongeramo muri dosiye: ")
+reka appended =  KIN_INYANDIKO.vugurura("path-to-file", new_file_content)
+niba (appended) {
+  tangaza_amakuru("Ibirimo byongewe muri dosiye")
+} niba_byanze {
+  tangaza_amakuru("Byanze kongeramo ibirimo muri dosiye iri ahantu: ", path-to-file)
+}
+```
+
+> Ibirimo bizongerwa muri dosiye watanze.
+> Uburyo `KIN_INYANDIKO.vugurura()` busubiza agaciro ka **boolean**, `nibyo` niba byongewe neza, cyangwa `sibyo` niba bitakunze.
+
+## Gusiba Dosiye
+
+Ukoresheje uburyo `KIN_INYANDIKO.siba(path-to-file)`, ushobora gusiba dosiye iri aho hantu (`path-to-file`).
+
+> Turagusaba kugenzura niba imirimo yakozwe neza cyangwa niba byanze, kugira ngo wemeze ko byose byarangiye neza nk’uko byifuzwa.

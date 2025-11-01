@@ -1,0 +1,92 @@
+---
+title: Amabwiriza yo Kugenzura (Conditional Statements)
+---
+
+# Intangiriro
+
+Akenshi igihe wandika code, ushaka gukora ibikorwa bitandukanye bitewe n’icyemezo runaka.
+
+Ushobora gukoresha **conditional statements** muri code yawe kugirango ubigereho.
+
+Muri **_Kin_**, dufite aya mabwiriza yo kugenzura:
+
+- Koresha `niba` kugirango usobanure igice cya code kizakorwa niba condition runaka ari ukuri
+- Koresha `nanone_niba` kugirango usobanure igice cya code kizakorwa niba condition imwe ari ibinyoma
+- Koresha `niba_byanze` kugirango usuzume condition nshya niba condition ya mbere ari ibinyoma
+- Koresha `gereranya` kugirango ushyireho ibice byinshi bya code bitewe n’agaciro gatandukanye
+
+## Niba Statement
+
+Koresha statement ya `niba` kugirango usobanure igice cya code ya **_Kin_** kizakorwa niba condition ari ukuri.
+
+```Kin
+niba (condition) {
+  # Code izakorwa niba condition ari ukuri
+}
+```
+
+> Icyitonderwa: `niba` igomba kwandikwa mu nyuguti nto. Inyuguti nkuru (`Niba` cyangwa `NIBA`) bizatera **_Kin_** error.
+
+## Niba_byanze Statement
+
+Koresha statement ya `niba_byanze` kugirango usobanure igice cya code kizakorwa niba condition ari ibinyoma.
+
+```Kin
+niba (condition) {
+  # code izakorwa niba condition ari ukuri
+} niba_byanze {
+  # code izakorwa niba condition ari ibinyoma
+}
+```
+
+## Nanone_niba Statement
+
+Koresha statement ya `nanone_niba` kugirango usuzume condition nshya niba condition ya mbere ari ibinyoma.
+
+```Kin
+niba (condition1) {
+  # code izakorwa niba condition1 ari ukuri
+} nanone_niba (condition2) {
+  # code izakorwa niba condition1 ari ibinyoma kandi condition2 ari ukuri
+} niba_byanze {
+  # code izakorwa niba condition1 ari ibinyoma kandi condition2 ari ibinyoma
+}
+```
+
+## Gereranya Statement (Switch)
+
+Koresha statement ya `gereranya` kugirango ukore ibikorwa bitandukanye bitewe n’agaciro gatandukanye.
+Statement ya **gereranya** itanga uburyo bwiza bwo gusimbuza statements nyinshi za `niba_byanze` igihe usuzuma variable ku gaciro kenshi.
+
+```Kin
+gereranya (expression) {
+  usanze value1:
+    # code izakorwa igihe expression ihuye na value1
+  usanze value2:
+    # code izakorwa igihe expression ihuye na value2
+  usanze value3:
+    # code izakorwa igihe expression ihuye na value3
+  ibindi:
+    # code izakorwa igihe expression itahuye na case na imwe
+}
+```
+
+> **Icyitonderwa:** Bitandukanye n’izindi ndimi zimwe, statement ya **gereranya** muri Kin ntiyitwaza **break statements**. Buri case irahagarika automatic ishyirwa mu bikorwa nyuma yo kurangiza igice cyayo.
+
+### Urugero
+
+```Kin
+reka iletere = injiza_amakuru("Shyiramo letere nyamuneka:")
+
+gereranya(iletere){
+    usanze "a":
+       reka a = 1
+       reka b = 2
+       tangaza_amakuru(a+b)
+       tangaza_amakuru("Iyi letere ni a")
+    usanze "b":
+       tangaza_amakuru("Iyi letere ni b")
+    ibindi:
+       tangaza_amakuru("Iyi letere ntayo twize")
+}
+```

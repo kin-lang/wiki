@@ -1,0 +1,106 @@
+---
+title: 'Ibintu (Objects)'
+---
+
+# Intangiriro
+
+Uramutse umaze kwiga ko **_Kin_** variables ari ibikoresho byo kubika amakuru.
+
+Uyu murongo uha agaciro gato (Fiat) kuri variable yitwa `car`:
+
+```Kin
+reka car = "Fiat"
+```
+
+**Objects** na zo ni variables. Ariko objects zishobora kubika amakuru menshi.
+
+Uyu murongo uha agaciro menshi (`Fiat`, `500`, `white`) kuri variable yitwa `car`:
+
+```Kin
+const car = {
+  type:"Fiat",
+  model:"500",
+  color:"white"
+}
+```
+
+Agaciro kashyizweho nk’**izina\:agaciro** (name\:value) aho izina n’agaciro byatandukanijwe na colon `:`.
+
+## Gusobanura Object (Object Definition)
+
+Ushobora gusobanura (kandi ugakora) **_Kin_** object ukoresheje **object literal**:
+
+```Kin
+reka person = {
+  firstName:"John",
+  lastName:"Doe",
+  age:50,
+  eyeColor:"blue"
+};
+
+# Ibi birasa na:
+reka person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+```
+
+> Intera n’imirongo ntibikenewe cyane. Object irashobora gusobanurwa ku mirongo myinshi.
+
+## Imiterere y'Object (Object Properties)
+
+**Izina\:agaciro** mu **_Kin_** objects byitwa **properties**:
+
+| Property  | Agaciro ka Property |
+| --------- | ------------------- |
+| firstName | John                |
+| lastName  | Doe                 |
+| age       | 50                  |
+| eyeColor  | blue                |
+
+---
+
+## Gukoresha Properties z’Object
+
+Ushobora gukoresha properties z’object mu buryo bubiri:
+
+```Kin
+objectName.propertyName
+```
+
+Cyangwa
+
+```Kin
+objectName["propertyName"]
+```
+
+## Uburyo bw’Object (Object Methods)
+
+**Method** ni function ibitswe nka property.
+
+Urugero:
+
+```Kin
+porogaramu_ntoya add(a, b) {
+  tanga a + b
+}
+
+reka obj = {
+  method: add
+}
+```
+
+> Muri iki gihe, object `obj` ifite method yitwa `method` ishobora gukora ikubiyemo imibare ibiri.
+
+> **Inyandiko:** Ntitwatangaje method imbere muri object. Muri **_Kin_**, ntidushyigikira gutangaza methods imbere muri objects. Dushobora gusa guha property ya object function.
+
+### Gukoresha Methods z’Object
+
+Ukoresha method y’object ukoresheje syntax ikurikira:
+
+```Kin
+obj.method()
+```
+
+Niba ukoresheje method utarinze `()`, bizagarura **definition ya function**:
+
+```Kin
+reka add = obj.method
+```

@@ -1,0 +1,11 @@
+{
+  "index": {
+    "type": "page",
+    "title": "Kin",
+    "display": "hidden",
+    "theme": { "layout": "raw" }
+  },
+  "docs": { "type": "page", "title": "Ibyigwa" },
+  "editor": { "type": "page", "title": "Ikibuga" },
+  "404": { "type": "page", "theme": { "timestamp": false, "typesetting": "article" } }
+}
