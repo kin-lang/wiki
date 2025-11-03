@@ -1,21 +1,21 @@
 ---
 title: Scope
 description: >-
-  Scope igenzura uburyo variables ziboneka (visibility). Muri **_Kin_**, variables zigira ubwoko 2 bwa scope: Function scope na Global scope.
+  Scope igenzura uburyo iminduragaciro ziboneka (visibility). Muri **_Kin_**, iminduragaciro zigira ubwoko 2 bwa scope: Function scope na Global scope.
 ---
 
 # Intangiriro
 
-**Scope** igenzura uburyo variables ziboneka (visibility).
+**Scope** igenzura uburyo iminduragaciro ziboneka (visibility).
 
-Muri **_Kin_**, variables zigira ubwoko 2 bwa scope:
+Muri **_Kin_**, iminduragaciro(variables) zigira ubwoko 2 bwa scope:
 
-- Function scope (aho function ibasha kubona variables)
-- Global scope (aho variables zibasha kugaragara hose)
+- Function scope (aho umumaro(function) ubasha kubona iminduragaciro)
+- Global scope (aho iminduragaciro zibasha kugaragara hose)
 
-## Function Scope (Scope y'imbere muri Function)
+## Function Scope (Scope yo mu mimaro)
 
-Variables zatanzwe muri **function ya _Kin_**, ni **LOCAL** kuri iyo function:
+iminduragaciro zatanzwe muri **function ya _Kin_**, ni **LOCAL** kuri uwo umumaro:
 
 ```Kin
 # code hano NTISHOBORA gukoresha carName
@@ -28,17 +28,17 @@ porogaramu_ntoya myFunction() {
 # code hano NTISHOBORA gukoresha carName
 ```
 
-> Variables z’imbere (Local) zigira Function Scope:
+> Iminduragaciro zo mu mimaro (Local) zigira Function Scope:
 
-> Zishobora kuboneka gusa imbere muri function.
+> Zishobora kuboneka gusa mu mimaro.
 
-> Kuko local variables zizwi gusa muri function zazo, variables zifite izina rimwe zirashobora gukoreshwa muri functions zitandukanye.
+> Kuko local variables zizwi gusa mu mimaro yazo, iminduragaciro zifite izina rimwe zishobora gukoreshwa mu mimaro itandukanye.
 
-> Local variables ziremwa igihe function itangiye, kandi zigasibwa igihe function irangiye.
+> Local variables ziremwa igihe umumaro utangiye, kandi zigasibwa igihe umumaro urangiye.
 
 ## Global Scope
 
-Variable yatanzwe hanze ya function iba **GLOBAL**.
+Iminduragaciro yatanzwe hanze y'umumaro iba **GLOBAL**.
 
 ```Kin
 reka carName = "Volvo"
@@ -49,6 +49,6 @@ porogaramu_ntoya myFunction() {
 }
 ```
 
-> Variables zatanzwe globally (hanze ya function) zigira Global Scope.
+> Iminduragaciro zatanzwe globally (hanze y'umumaro) zigira Global Scope.
 
-> Global variables zirashobora gukoreshwa ahantu hose muri porogaramu ya **_Kin_**.
+> Global variables zishobora gukoreshwa ahantu hose muri porogaramu ya **_Kin_**.

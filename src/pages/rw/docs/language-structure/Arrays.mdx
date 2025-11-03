@@ -1,10 +1,7 @@
----
-title: 'Imbonerahamwe (Arrays)'
----
 
 # Intangiriro
 
-**Imbonerahamwe (array)** ni **variable** idasanzwe ishobora gufata agaciro kenshi:
+**Urutonde rw'ibintu (array)** ni **ihinduragaciro** ridasanzwe kuko rushobora gufata agaciro kenshi:
 
 Urugero:
 
@@ -12,9 +9,9 @@ Urugero:
 reka names  = ["Bwenge", "Nyabihu"]
 ```
 
-## Kuki Dukoresha Imbonerahamwe?
+## Kuki Dukoresha Urutonde rw'ibintu?
 
-Niba ufite urutonde rw’ibintu (nk’urugero amazina y’imodoka), kubibika muri **variables** zitandukanye byashoboka gutya:
+Niba ufite urutonde rw’ibintu (nk’urugero amazina y’imodoka), kubibika muri **minduragaciro (Variables)** zitandukanye byashoboka gutya:
 
 ```Kin
 reka car1 = "Saab"
@@ -22,15 +19,15 @@ reka car2 = "Volvo"
 reka car3 = "BMW"
 ```
 
-Ariko se, niba ushaka gukora **loop** ku modoka zose ukabona imwe runaka? Kandi niba udafite imodoka 3 gusa, ahubwo ufite 300?
+Ariko se, niba ushaka guhitamo imodoka imwe runaka? Kandi ibaze noneho udafite imodoka 3 gusa, ahubwo ufite 300?
 
-Igisubizo ni **imbonerahamwe**!
+Igisubizo ni **Urutonde rw'ibintu**!
 
-**Imbonerahamwe** ishobora gufata agaciro kenshi munsi y’izina rimwe, kandi ushobora kubona agaciro ukoresheje **index number**.
+**Urutonde rw'ibintu** rushobora gufata agaciro kenshi munsi y’izina rimwe, kandi ushobora kubona agaciro ukoresheje **umwanya (index number)**.
 
-## Gukora Imbonerahamwe
+## Gukora Urutonde rw'ibintu
 
-Ukoresheje **array literal** ni bwo buryo bworoshye bwo gukora **_Kin_ Array**.
+Gukoresha **array literal** ni bwo buryo bworoshye bwo gukora urutonde rw'ibintu muri **_Kin_**.
 
 **Syntax:**
 
@@ -38,7 +35,7 @@ Ukoresheje **array literal** ni bwo buryo bworoshye bwo gukora **_Kin_ Array**.
 ntahinduka array_name = [item1, item2, ...]
 ```
 
-Aho uhitamo intera cyangwa umurongo ntibifite ikibazo. Declaration ishobora kugera ku mirongo myinshi:
+Intera cyangwa umurongo ntibitera ikibazo. Ihamagarwa(Declaration) rishobora kugera ku mirongo myinshi:
 
 ```Kin
 ntahinduka cars = [
@@ -48,7 +45,7 @@ ntahinduka cars = [
 ];
 ```
 
-Ushobora kandi gukora array ubundi ukongeramo ibice:
+Ushobora kandi gukora urutonde rw'ibintu hanyuma ukongeramo ibice:
 
 ```Kin
 ntahinduka cars = [];
@@ -59,30 +56,30 @@ cars[2]= "BMW";
 
 ## Kwinjira mu Bice by’Imbonerahamwe
 
-Ushobora kubona agaciro k’array ukoresheje **index number**:
+Ushobora kubona agaciro k'urutonde rw'ibintu ukoresheje **umwanya(index number)**:
 
 ```Kin
 ntahinduka cars = ["Saab", "Volvo", "BMW"];
 reka car = cars[0];
 ```
 
-> Index ya array itangirira kuri 0.
+> Umwanya w'urutonde rw'ibintu utangirira kuri 0.
 > \[0] ni igice cya mbere. \[1] ni icya kabiri.
 
-## Guhindura Agaciro k’Igice cy’Imbonerahamwe
+## Guhindura Agaciro k’Igice cy’Urutonde rw'ibintu
 
-Ubu butumwa buhindura agaciro k’igice cya mbere muri **cars**:
+Iri tangazo rihindura agaciro k’igice cya mbere muri **cars**:
 
 ```Kin
 reka cars = ["Saab", "Volvo", "BMW"];
 cars[0] = "Opel";
 ```
 
-# Method z’Imbonerahamwe
+# Methode z’Urutonde rw'ibintu
 
-### Ingano ya Array
+### Ingano y'Urutonde rw'ibintu
 
-Ushobora kubona **ingano** y’imbonerahamwe ukoresheje `KIN_URUTONDE.ingano()`.
+Ushobora kubona **ingano** y'Urutonde rw'ibintu ukoresheje `KIN_URUTONDE.ingano()`.
 
 Urugero:
 
@@ -91,11 +88,11 @@ reka ijambo = ["Hello", "World"]
 tangaza_amakuru(KIN_URUTONDE.ingano(ijambo))
 ```
 
-> Output: 2
+> Ibisohoka: 2
 
-### Kureba niba Array Irimo Agaciro
+### Kureba niba Urutonde rw'ibintu rurimo Agaciro
 
-Ushobora kugenzura niba array irimo agaciro runaka ukoresheje `KIN_URUTONDE.ifite()`.
+Ushobora kugenzura niba Urutonde rw'ibintu rurimo agaciro runaka ukoresheje `KIN_URUTONDE.ifite()`.
 
 Urugero:
 
@@ -104,11 +101,11 @@ reka ijambo = ["Hello", "World"]
 tangaza_amakuru(KIN_URUTONDE.ifite(ijambo, "Hello"))
 ```
 
-> Output: nibyo
+> Ibisohoka: nibyo
 
-### Guhuza Ibice by’Imbonerahamwe
+### Guhuza Ibice by'Urutonde rw'ibintu
 
-Ushobora guhuza ibice byose by’imbonerahamwe kugira ngo bikore ijambo rimwe ukoresheje `KIN_URUTONDE.kora_ijambo()`.
+Ushobora guhuza ibice byose by'Urutonde rw'ibintu kugira ngo bikore ijambo rimwe ukoresheje `KIN_URUTONDE.kora_ijambo()`.
 
 Urugero:
 
@@ -117,4 +114,4 @@ reka cars = ["Saab", "Volvo", "BMW"];
 tangaza_amakuru(KIN_URUTONDE.kora_ijambo(cars))
 ```
 
-> Output: SaabVolvoBMW
+> Ibisohoka(Output): SaabVolvoBMW

@@ -4,74 +4,74 @@ title: Amabwiriza yo Kugenzura (Conditional Statements)
 
 # Intangiriro
 
-Akenshi igihe wandika code, ushaka gukora ibikorwa bitandukanye bitewe n’icyemezo runaka.
+Akenshi iyo wandika code, uzashaka gukora ibikorwa bitandukanye bitewe n’ibyemezo runaka.
 
 Ushobora gukoresha **conditional statements** muri code yawe kugirango ubigereho.
 
 Muri **_Kin_**, dufite aya mabwiriza yo kugenzura:
 
 - Koresha `niba` kugirango usobanure igice cya code kizakorwa niba condition runaka ari ukuri
-- Koresha `nanone_niba` kugirango usobanure igice cya code kizakorwa niba condition imwe ari ibinyoma
-- Koresha `niba_byanze` kugirango usuzume condition nshya niba condition ya mbere ari ibinyoma
+- Koresha `nanone_niba` kugirango usobanure igice cya code kizakorwa niba iyo condition ari ikinyoma
+- Koresha `niba_byanze` kugirango usuzume condition nshya niba condition ya mbere ari ikinyoma
 - Koresha `gereranya` kugirango ushyireho ibice byinshi bya code bitewe n’agaciro gatandukanye
 
 ## Niba Statement
 
-Koresha statement ya `niba` kugirango usobanure igice cya code ya **_Kin_** kizakorwa niba condition ari ukuri.
+Koresha statement ya `niba` kugirango usobanure igice cya code ya **_Kin_** kizakorwa niba condition runaka ari ukuri.
 
 ```Kin
 niba (condition) {
-  # Code izakorwa niba condition ari ukuri
+  # Ikintu kizakorwa niba condition ari ukuri
 }
 ```
 
-> Icyitonderwa: `niba` igomba kwandikwa mu nyuguti nto. Inyuguti nkuru (`Niba` cyangwa `NIBA`) bizatera **_Kin_** error.
+> Icyitonderwa: `niba` igomba kwandikwa mu nyuguti nto. Inyuguti nkuru (`Niba` cyangwa `NIBA`) bizatera ibibazo muri **_Kin_**.
 
 ## Niba_byanze Statement
 
-Koresha statement ya `niba_byanze` kugirango usobanure igice cya code kizakorwa niba condition ari ibinyoma.
+Koresha itangazo rya `niba_byanze` kugirango usobanure igice cya code kizakorwa niba condition ari ikinyoma.
 
 ```Kin
 niba (condition) {
-  # code izakorwa niba condition ari ukuri
+  # ikintu kizakorwa niba condition ari ukuri
 } niba_byanze {
-  # code izakorwa niba condition ari ibinyoma
+  # ikintu kizakorwa niba condition ari ikinyoma
 }
 ```
 
 ## Nanone_niba Statement
 
-Koresha statement ya `nanone_niba` kugirango usuzume condition nshya niba condition ya mbere ari ibinyoma.
+Koresha statement ya `nanone_niba` kugirango usuzume condition nshya niba condition ya mbere ari ikinyoma.
 
 ```Kin
 niba (condition1) {
-  # code izakorwa niba condition1 ari ukuri
+  # ikintu kizakorwa niba condition ari ukuri
 } nanone_niba (condition2) {
-  # code izakorwa niba condition1 ari ibinyoma kandi condition2 ari ukuri
+  # ikintu kizakorwa niba condition1 ari ikinyoma kandi condition2 ari ukuri
 } niba_byanze {
-  # code izakorwa niba condition1 ari ibinyoma kandi condition2 ari ibinyoma
+  # ikintu kizakorwa niba condition1 ari ikinyoma kandi condition2 ari ikinyoma nayo
 }
 ```
 
 ## Gereranya Statement (Switch)
 
-Koresha statement ya `gereranya` kugirango ukore ibikorwa bitandukanye bitewe n’agaciro gatandukanye.
-Statement ya **gereranya** itanga uburyo bwiza bwo gusimbuza statements nyinshi za `niba_byanze` igihe usuzuma variable ku gaciro kenshi.
+Koresha statement ya `gereranya` kugirango ukore ibikorwa bitandukanye bitewe n’agaciro kanyuranye.
+Statement ya **gereranya** itanga uburyo bwiza bwo gusimbuza statements nyinshi za `niba_byanze` umgihe usuzuma iminduragaciro zifite agaciro kenshi.
 
 ```Kin
 gereranya (expression) {
   usanze value1:
-    # code izakorwa igihe expression ihuye na value1
+    # ikintu kizakorwa mugihe expression ihuye na value1
   usanze value2:
-    # code izakorwa igihe expression ihuye na value2
+    # ikintu kizakorwa mugihe expression ihuye na value2
   usanze value3:
-    # code izakorwa igihe expression ihuye na value3
+    # ikintu kizakorwa mugihe expression ihuye na value3
   ibindi:
-    # code izakorwa igihe expression itahuye na case na imwe
+    # ikintu kizakorwa igihe expression itahuye na case n'imwe
 }
 ```
 
-> **Icyitonderwa:** Bitandukanye n’izindi ndimi zimwe, statement ya **gereranya** muri Kin ntiyitwaza **break statements**. Buri case irahagarika automatic ishyirwa mu bikorwa nyuma yo kurangiza igice cyayo.
+> **Icyitonderwa:** Bitandukanye n’izindi ndimi zimwe na zimwe, statement ya **gereranya** muri Kin ntiyitwaza **break statements**. Buri case ihagarara mu buryo buri automatique nyuma yo kurangiza igice cyayo.
 
 ### Urugero
 

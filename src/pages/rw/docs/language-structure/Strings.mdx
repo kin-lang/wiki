@@ -1,12 +1,12 @@
 ---
-title: Insinga (Strings)
+title: Interuro/Ijambo (Strings)
 ---
 
 # Intangiriro
 
-**Insinga (Strings)** zikoreshwa mu kubika inyandiko (text).
+**Ijambo/Interuro (Strings)** zikoreshwa mu kubika inyandiko (text).
 
-Insinga zandikwa ukoresheje **double quotes**.
+Ijambo/Interuro zandikwa ukoresheje **utwuguruzo n'utwugarizo (double quotes)**.
 
 Urugero:
 
@@ -14,13 +14,13 @@ Urugero:
 reka x = "Hello World"
 ```
 
-## Uburyo bwo Gukora ku Insinga (String Methods)
+## Uburyo bwo Gukora ku Ijambo/Interuro (String Methods)
 
-**_Kin_** itanga uburyo butandukanye bwo gucunga insinga, byose biri muri **`KIN_AMAGAMBO`** utility y’imbere muri **_Kin_**.
+**_Kin_** itanga uburyo butandukanye bwo gucunga Ijambo/Interuro, byose biri mu mumaro wubatswe muri **_Kin_** ari wo **`KIN_AMAGAMBO`**.
 
-### Guhuza Insinga (String Concatenation)
+### Guhuza Ijambo/Interuro (String Concatenation)
 
-Ushobora guhuza insinga ukoresheje **`KIN_AMAGAMBO.huza()`**.
+Ushobora guhuza Ijambo/Interuro ukoresheje **`KIN_AMAGAMBO.huza()`**.
 
 Urugero:
 
@@ -32,13 +32,13 @@ reka z = KIN_AMAGAMBO.huza(x, y)
 tangaza_amakuru(z)
 ```
 
-> Output: Hello World
+> Ibisohoka (Output): Hello World
 
-> Inyandiko: **`KIN_AMAGAMBO.huza()`** ishobora kwakira arguments nyinshi uko ushaka.
+> Icyitonderwa: **`KIN_AMAGAMBO.huza()`** ishobora kwakira ibipimo(arguments) byinshi uko ubishaka.
 
-### Uburebure bw'Insinga (String Length)
+### Uburebure bw'Ijambo/Interuro (String Length)
 
-Ushobora kumenya uburebure bw’insinga ukoresheje **`KIN_AMAGAMBO.ingano()`**.
+Ushobora kumenya uburebure bw’ijambo/interuro ukoresheje **`KIN_AMAGAMBO.ingano()`**.
 
 Urugero:
 
@@ -47,11 +47,11 @@ reka ijambo = "Hello World"
 tangaza_amakuru(KIN_AMAGAMBO.ingano(ijambo))
 ```
 
-> Output: 11
+> Ibisohoka: 11
 
-### Gutandukanya Insinga (Splitting String)
+### Gutandukanya Ijambo/Interuro (Splitting String)
 
-Ushobora gutandukanya insinga ukoresheje delimiter icyo ari cyo cyose ukoresheje **`KIN_AMAGAMBO.tandukanya()`**.
+Ushobora gutandukanya ijambo/interuro ukoresheje Ikimenyetso gitandukanya (delimiter) icyo ari cyo cyose **`KIN_AMAGAMBO.tandukanya()`**.
 
 Urugero:
 
@@ -61,27 +61,27 @@ reka hello = KIN_AMAGAMBO.tandukanya(ijambo, " ")
 tangaza_amakuru(hello[0])
 ```
 
-> Output: Hello
+> Ibisohoka (Output): Hello
 
-> _Inyandiko_: **`KIN_AMAGAMBO.tandukanya()`** isubiza **array**, kandi iyo ugerageje kuyicapura yose, bizatanga `[Object Object]`. Ibi biterwa n’uko **Arrays** ari **Objects** muri Kin. Ugomba gukorana n’igice kimwe cya array icyarimwe.
+> _Icyitonderwa_: **`KIN_AMAGAMBO.tandukanya()`** isubiza **urutonde rw'ibintu (array)**, kandi iyo ugerageje kubyandika ku igaragazamakuru, bizatanga `[Object Object]`. Ibi biterwa n’uko **Arrays** ari **Objects** muri Kin. Ugomba gukorana n’igice kimwe cy'urutonde rw'ibintu icyarimwe.
 
 ### Inyuguti Ntoya n’Inyuguti Nkuru (Upper Case & Lower Case)
 
 - Inyuguti Nkuru (UpperCase)
 
 ```Kin
-KIN_AMAGAMBO.inyuguti_nkuru(string) # Iyi izahindura insinga yahawe inyuguti nkuru
+KIN_AMAGAMBO.inyuguti_nkuru(string) # Iyi izahindura Ijambo/Interuro yahawe mo inyuguti nkuru
 ```
 
 - Inyuguti Ntoya (LowerCase)
 
 ```Kin
-KIN_AMAGAMBO.inyuguti_ntoya(string) # Iyi izahindura insinga yahawe inyuguti ntoya
+KIN_AMAGAMBO.inyuguti_ntoya(string) # Iyi izahindura Ijambo/Interuro yahawe mo inyuguti ntoya
 ```
 
 ### Gufata Inyuguti imwe (Getting Character)
 
-Ushobora gufata inyuguti iri ku index runaka ukoresheje **`KIN_AMAGAMBO.inyuguti(string, characterIndex)`**.
+Ushobora gufata inyuguti iri ku umwanya runaka ukoresheje **`KIN_AMAGAMBO.inyuguti(string, characterIndex)`**.
 
 Urugero:
 
@@ -91,11 +91,11 @@ reka char = KIN_AMAGAMBO.inyuguti(str, 8) # Izagarura 'a'
 tangaza_amakuru(char)
 ```
 
-> Ibi bizacapura inyuguti `a` kuri console.
+> Ibi bizandika inyuguti `a` kuri console.
 
-## Gusubiramo Inyuguti z’Insinga (Iterating over String)
+## Gusubiramo Inyuguti y’Ijambo/Interuro (Iterating over String)
 
-Muri **_Kin_**, ukoresheje **`KIN_AMAGAMBO.ingano()`** na **`KIN_AMAGAMBO.inyuguti()`**, birashoboka gusubiramo inyuguti z’insinga.
+Muri **_Kin_**, ukoresheje **`KIN_AMAGAMBO.ingano()`** na **`KIN_AMAGAMBO.inyuguti()`**, birashoboka gusubiramo inyuguti y’ijambo/interuro.
 
 Urugero:
 
@@ -104,10 +104,10 @@ reka str = "a string"
 
 reka i = 0
 
-subiramo_niba(i < KIN_AMAGAMBO.ingano(str)) { # ukoresha KIN_AMAGAMBO.ingano() kumenya uburebure bw’insinga
-  tangaza_amakuru(KIN_AMAGAMBO.inyuguti(str, i)) # Fata inyuguti iri ku index runaka
+subiramo_niba(i < KIN_AMAGAMBO.ingano(str)) { # ukoresha KIN_AMAGAMBO.ingano() kumenya uburebure bw’ijambo/interuro
+  tangaza_amakuru(KIN_AMAGAMBO.inyuguti(str, i)) # Fata inyuguti iri ku umwanya runaka
   i = i + 1
 }
 ```
 
-> Output: buri nyuguti icapurwa ku murongo wayo.
+> Ibisohoka: buri nyuguti irandikwa ku murongo wayo.

@@ -1,12 +1,12 @@
 ---
-title: 'Imirimo (Functions)'
+title: 'Imimaro (Functions)'
 ---
 
 # Intangiriro
 
-**_Kin_** function ni igice cya code cyateguwe gukora umurimo runaka.
+**_Kin_** umumaro ni igice cya code cyateguwe gukora umurimo runaka.
 
-**_Kin_** function ikora iyo "ikintu" kiyihamagaye (yahamagawe).
+**_Kin_** umumaro ikora iyo "ikintu" kiwuhamagaye.
 
 Urugero:
 
@@ -16,16 +16,16 @@ porogaramu_ntoya function(a, b) {
 }
 ```
 
-## Imiterere ya Function (Function Syntax)
+## Imiterere y'Imimaro (Function Syntax)
 
-**_Kin_** function ishyirwaho hifashishijwe ijambo `porogaramu_ntoya`, rikurikirwa n’izina, hanyuma hakurikiraho parentheses ().
+**_Kin_** umumaro ushyirwaho wandikwa wifashije `porogaramu_ntoya`, ugakurikiza n’izina, hanyuma ukandika n'udukubo ().
 
-Amazina ya function ashobora kugira inyuguti, imibare, underscores, na dollar signs (amategeko ameze nk’ayo ku variables).
+Amazina y'umumaro ashobora kugira inyuguti, imibare, underscores(_), na dollar signs (amategeko ameze nk’ayi iminduragaciro).
 
-Mu parentheses hashobora gushyirwa amazina y’parameters atandukanijwe na comma:
+Mu dukubo hashobora gushyirwamo amazina y'ibipimo atandukanijwe n' akitso:
 (parameter1, parameter2, ...)
 
-Code izakorwa na function ishyirwa muri curly brackets: {}
+Code izashyirwa mu bikorwa n'umumaro ishyirwa muri curly brackets: {}
 
 ```Kin
 porogaramu_ntoya izina(parameter1, parameter2, parameter3) {
@@ -33,15 +33,15 @@ porogaramu_ntoya izina(parameter1, parameter2, parameter3) {
 }
 ```
 
-Parameters za function zishyirwa muri parentheses () mu gusobanura function.
+Ibipimo by'mimaro bishyirwa mu dukubo () mu kwandika umumaro
 
-Arguments za function ni agaciro function yakiriye igihe yahamagajwe.
+Ibipimo by'mimaro ni agaciro k'umimaro yakiriye mugihe yahamagawe.
 
-Muri function, arguments (parameters) bikora nka variables z’imbere muri function (local variables).
+Mu mumaro, ibipimo (parameters) bikora nk'minduragaciro zo mu mumaro (local variables).
 
-## Guhamagara Function (Function Invocation)
+## Guhamagara Umumaro (Function Invocation)
 
-Code iri muri function izakora igihe "ikintu" cyahamagaje (calls) function:
+Code iri mu mumaro izakora igihe "ikintu" gihamagaye (calls) umumaro:
 
 ```Kin
 izinaFunction(argument1, argument2, argument3, ...)
@@ -49,11 +49,11 @@ izinaFunction(argument1, argument2, argument3, ...)
 
 ## Gusubiza Agaciro (Function Return)
 
-Iyo **_Kin_** igeze ku nteruro ya `return`, function irahagarara gukora.
+Iyo **_Kin_** igeze ku nteruro ya `return`, umumaro urahagarika gukora.
 
-Niba function yahamagajwe mu nteruro, **_Kin_** izasubira ku nteruro ikurikira iyihamagaje.
+Niba umumaro wahamagawe mu itangazo, **_Kin_** izagaruka gushyira mu bikorwa code nyuma guhamagara iryo tangazo
 
-Functions akenshi zibarira agaciro kagarurwa. Agaciro karasubizwa ku "wahamagaye":
+Imimaro akenshi isubiza agaciro kenshi. Agaciro gasubizwa uwahamagaye (caller) uwo mumaro:
 
 ```Kin
 porogaramu_ntoya myFunction(a, b) {
@@ -61,11 +61,11 @@ porogaramu_ntoya myFunction(a, b) {
   return a * b;
 }
 
-# Function ihamagajwe, agaciro gasubijwe kazajya muri x
+# Umumaro uhamagawe, agaciro gasubijwe kazajya kuri x
 reka x = myFunction(4, 3);
 ```
 
-> Nyuma ya `return` ntihagire indi nteruro iri munsi yayo muri function
+> Nyuma ya `return` ntayindi nteruro yemewe muri function
 
 Ibi rero bizatanga ikosa:
 
@@ -76,10 +76,10 @@ porogaramu_ntoya function(a, b) {
 }
 ```
 
-## Impamvu yo Gukoresha Functions
+## Impamvu yo Gukoresha Imimaro
 
-Ukoresheje functions ushobora gusubiramo code.
+Ukoresheje imimaro ushobora gusubiramo code.
 
 Ushobora kwandika code ishobora gukoreshwa inshuro nyinshi.
 
-Ushobora gukoresha code imwe n’arguments zitandukanye, kugira ngo uhabwe ibisubizo bitandukanye.
+Ushobora gukoresha code imwe ifite ibipimo bitandukanye, ikabyara ibisubizo bitandukanye.

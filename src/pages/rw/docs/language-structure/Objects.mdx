@@ -1,20 +1,20 @@
 ---
-title: 'Ibintu (Objects)'
+title: 'Ibyegeranyo (Objects)'
 ---
 
 # Intangiriro
 
-Uramutse umaze kwiga ko **_Kin_** variables ari ibikoresho byo kubika amakuru.
+Uramutse umaze kwiga ko iminduragaciro zo muri **_Kin_**  ari ibikoresho byo kubika amakuru.
 
-Uyu murongo uha agaciro gato (Fiat) kuri variable yitwa `car`:
+Uyu murongo uha agaciro gato (Fiat) ku ihinduragaciro yitwa `car`:
 
 ```Kin
 reka car = "Fiat"
 ```
 
-**Objects** na zo ni variables. Ariko objects zishobora kubika amakuru menshi.
+**Ibyegeranyo(Objects)** na zo ni iminduragaciro(variables). Ariko ibyegeranyo bishobora kubika amakuru menshi.
 
-Uyu murongo uha agaciro menshi (`Fiat`, `500`, `white`) kuri variable yitwa `car`:
+Uyu murongo uha agaciro kenshi (`Fiat`, `500`, `white`) ku ihinduragaciro yitwa `car`:
 
 ```Kin
 const car = {
@@ -24,11 +24,11 @@ const car = {
 }
 ```
 
-Agaciro kashyizweho nk’**izina\:agaciro** (name\:value) aho izina n’agaciro byatandukanijwe na colon `:`.
+Agaciro kashyizweho nk’**izina\:agaciro** (name\:value) aho izina n’agaciro byatandukanijwe n'utudomo tubiri `:`.
 
-## Gusobanura Object (Object Definition)
+## Gusobanura Ibyegeranyo (Object Definition)
 
-Ushobora gusobanura (kandi ugakora) **_Kin_** object ukoresheje **object literal**:
+Ushobora gusobanura no gukora ibyegeranyo muri **_Kin_** ukoresheje **object literal**:
 
 ```Kin
 reka person = {
@@ -38,17 +38,17 @@ reka person = {
   eyeColor:"blue"
 };
 
-# Ibi birasa na:
+# Ibi bimeze no kwandika gutya:
 reka person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
 ```
 
-> Intera n’imirongo ntibikenewe cyane. Object irashobora gusobanurwa ku mirongo myinshi.
+> Intera n’imirongo si ingenzi. Ibyegeranyo bishobora kwandikwa ukoresheje imirongo myinshi.
 
-## Imiterere y'Object (Object Properties)
+## Imiterere y'Ibyegeranyo (Object Properties)
 
-**Izina\:agaciro** mu **_Kin_** objects byitwa **properties**:
+**Izina\:agaciro** mu byegeranyo bya **_Kin_** byitwa **imiterere (properties)**:
 
-| Property  | Agaciro ka Property |
+| Imiterere | Agaciro k'imiterere|
 | --------- | ------------------- |
 | firstName | John                |
 | lastName  | Doe                 |
@@ -57,9 +57,9 @@ reka person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
 
 ---
 
-## Gukoresha Properties z’Object
+## Gukoresha Imiterere y'Ibyegeranyo (Object Properties)
 
-Ushobora gukoresha properties z’object mu buryo bubiri:
+Ushobora gukoresha imiterere y'ibyegeranyo mu buryo bubiri:
 
 ```Kin
 objectName.propertyName
@@ -71,9 +71,9 @@ Cyangwa
 objectName["propertyName"]
 ```
 
-## Uburyo bw’Object (Object Methods)
+## Uburyo bw'ibyegeranyo (Object Methods)
 
-**Method** ni function ibitswe nka property.
+Methode ni umumaro ubitswe nk'imiterere.
 
 Urugero:
 
@@ -87,19 +87,19 @@ reka obj = {
 }
 ```
 
-> Muri iki gihe, object `obj` ifite method yitwa `method` ishobora gukora ikubiyemo imibare ibiri.
+> Mu rugero rwacu, icyegeranyo `obj` gifite methode yitwa `method` ishobora guteranya imibare ibiri.
 
-> **Inyandiko:** Ntitwatangaje method imbere muri object. Muri **_Kin_**, ntidushyigikira gutangaza methods imbere muri objects. Dushobora gusa guha property ya object function.
+> **Icyitonderwa:** Ntitwatangaje methode mu cyegeranyo. Muri **_Kin_**, ntidushyigikira gutangaza methodes mu byegeranyo. Dushobora guha umumaro imiterere y'ibyegeranyo gusa.
 
-### Gukoresha Methods z’Object
+### Gukoresha Methodes z’ibyegeranyo
 
-Ukoresha method y’object ukoresheje syntax ikurikira:
+Iyo ukoresha methode y'cyegeranyo ukoresha syntax ikurikira:
 
 ```Kin
 obj.method()
 ```
 
-Niba ukoresheje method utarinze `()`, bizagarura **definition ya function**:
+Niba ukoresheje methode ntukoreshe `()`, bizagarura **definition ya function**:
 
 ```Kin
 reka add = obj.method
