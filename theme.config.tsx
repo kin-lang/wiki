@@ -44,7 +44,7 @@ const config = {
   },
   docsRepositoryBase: "https://github.com/kin-lang/wiki/tree/main/",
   footer: {
-    text: "Made and Designed with 💖 by Murangwa Pacifique. Translated by Laurent",
+    text: "Made and Designed with 💖 by Murangwa Pacifique. Translated by Irakarama Laurent",
   },
   toc: {
     backToTop: true,
