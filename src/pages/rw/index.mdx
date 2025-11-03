@@ -1,13 +1,17 @@
 ---
 title: Kin – Andika porogaramu mu Kinyarwanda
+type: page
 ---
 
 import Link from 'next/link';
 import Button from '@/components/ui/button';
+import DocsLanguageSwitcher from '@/components/DocsLanguageSwitcher';
 
 export default function Component() {
   return (
-    <div className='min-h-screen bg-background text-foreground dark:bg-background dark:text-foreground'>
+    <>
+      <DocsLanguageSwitcher />
+      <div className='min-h-screen bg-background text-foreground dark:bg-background dark:text-foreground'>
       <main>
         <section
           id='hero'
@@ -19,10 +23,10 @@ export default function Component() {
           <p className='max-w-3xl mt-4 text-lg md:text-xl text-muted-foreground'>
             Kin ni ururimi rushya kandi rworoshye kugerwaho rwagenewe gufasha
             Abanyarwanda kwiga porogaramu mu Kinyarwanda, rutsindagira ku
-            bworoherane no kwigisha aho kuba ku bikorwa binini by’iterambere.
+            bworoherane no kwigisha aho kuba ku bikorwa binini by'iterambere.
           </p>
           <div className='flex flex-col gap-4 mt-8 sm:flex-row'>
-            <Link href={'/docs'}>
+            <Link href={'/rw/docs'}>
               <Button className='w-full sm:w-auto'>Ibisobanuro</Button>
             </Link>
             <Link href={'/editor'}>
@@ -34,5 +38,6 @@ export default function Component() {
         </section>
       </main>
     </div>
+    </>
   );
 }
