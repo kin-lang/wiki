@@ -7,12 +7,11 @@ import Link from 'next/link';
 import Button from '@/components/ui/button';
 import DocsLanguageSwitcher from '@/components/DocsLanguageSwitcher';
 
-export default function Component() {
+export default function HomePage() {
   return (
     <>
       <DocsLanguageSwitcher />
-      <div className='min-h-screen bg-background text-foreground dark:bg-background dark:text-foreground'>
-      <main>
+      <div className='min-h-screen'>
         <section
           id='hero'
           className='flex flex-col items-center px-4 py-16 text-center md:py-24 lg:py-32 md:px-6'
@@ -20,11 +19,11 @@ export default function Component() {
           <h1 className='text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl'>
             Kin: Porogaramu mu Kinyarwanda
           </h1>
-          <p className='max-w-3xl mt-4 text-lg md:text-xl text-muted-foreground'>
+          <div className='max-w-3xl mt-4 text-lg md:text-xl text-muted-foreground'>
             Kin ni ururimi rushya kandi rworoshye kwiga rwagenewe gufasha
             Abanyarwanda kwiga porogaramu mu Kinyarwanda, rutsindagira ku
             bworoherane no kwigisha aho kuba ku bikorwa binini by'iterambere.
-          </p>
+          </div>
           <div className='flex flex-col gap-4 mt-8 sm:flex-row'>
             <Link href={'/rw/docs'}>
               <Button className='w-full sm:w-auto'>Ibisobanuro</Button>
@@ -36,8 +35,7 @@ export default function Component() {
             </Link>
           </div>
         </section>
-      </main>
-    </div>
+      </div>
     </>
   );
 }
