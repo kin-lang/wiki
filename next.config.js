@@ -1,7 +1,9 @@
 const withNextra = require('nextra')({
-    output: 'export',
     theme: 'nextra-theme-docs',
-    themeConfig: './theme.config.tsx'
+    themeConfig: './theme.config.tsx',
+    defaultShowCopyCode: true
 })
 
-module.exports = withNextra()
+module.exports = withNextra({
+    trailingSlash: false
+})

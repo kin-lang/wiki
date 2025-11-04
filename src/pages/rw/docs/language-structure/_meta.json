@@ -1,0 +1,15 @@
+{
+  "Input-Output": "Ibyinjira/Ibisohoka",
+  "Syntax": "Imiterere y'amagambo (syntax)",
+  "Comments": "Ibisobanuro (comments)",
+  "Variables": "Iminduragaciro (variables)",
+  "Operators": "Ibimenyetso bikora (operators)",
+  "Data-types": "Ubwoko bw'amakuru (data types)",
+  "Strings": "Interuro/Ijambo (strings)",
+  "Arrays": "Urutonde rw'Ibintu (arrays)",
+  "Objects": "Ibyegeranyo (objects)",
+  "Functions": "Imimaro (functions)",
+  "Conditions": "Amategeko agenga ibikorwa (control statements)",
+  "Loops": "Ibyisubiramo (loops)",
+  "Scope": "Urwego rw’imikorere (scope)"
+}

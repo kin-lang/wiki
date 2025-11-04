@@ -1,0 +1,155 @@
+---
+title: "Ubwoko bw'Amakuru (Data Types)"
+---
+
+# Intangiriro
+
+Muri porogaramu, **ubwoko bw'amakuru** ni ikintu cy’ingenzi.
+
+Kugira ngo ushobore gukora ku **minduragaciro(variables)**, ni ngombwa kumenya ubwoko bwayo.
+
+Kuko **iminduragaciro** zose ntago zigira ubwoko bumwe, ibikorwa bishobora gukorerwa kuri zo biratandukanye.
+
+## Ubwoko bw'Amakuru muri Kin
+
+**_Kin_** ifite ubwoko 5 bw'amakuru:
+
+1. Ijambo/interuro (String)
+2. Umubare (Number)
+3. Boolean (`nibyo`/`sibyo`)
+4. Ubusa (Null)
+5. Ikintu (Object)
+
+Ubwoko bw' **ibyegeranyo** bushobora kugira:
+
+1. Icyegeranyo (Object)
+2. Urutonde rw'ibintu (Array)
+
+Urugero:
+
+```Kin
+# Imibare:
+reka length = 16
+reka weight = 7.5
+
+# Ijambo/interuro:
+reka color = "Yellow"
+reka lastName = "Johnson"
+
+# Boolean:
+reka x = nibyo
+reka y = sibyo
+
+# Icyegeranyo:
+ntahinduka person = {firstName:"John", lastName:"Doe"}
+
+# Urutonde rw'ibintu (Array):
+ntahinduka cars = ["Saab", "Volvo", "BMW"]
+```
+
+> **Icyitonderwa:** Ihinduragaciro ya **_Kin_** ishobora gufata ubwoko ubwo ari bwo bwose bw'amakuru.
+
+## Ubwoko bwa Kin bushobora guhinduka
+
+**_Kin_** ifite **ubwoko buhinduka**, bisobanuye ko ihinduragaciro rishobora gufata ubwoko butandukanye bw'amakuru:
+
+```Kin
+reka x        # Ubu x ntabwo iramenyekana
+x = 5         # Ubu x ni Umubare
+x = "John"    # Ubu x ni Ijambo
+```
+
+## Interuro/Ijambo muri Kin (Strings)
+
+**Interuro/Ijambo (String)** ni urukurikirane rw’inyuguti cyangwa inyandiko, nka "John Doe".
+
+Interuro/Amagambo yandikwa ukoresheje **utwuguruzo n'utwugarizo**.
+
+Urugero:
+
+```Kin
+# Ijambo:
+reka carName = "Volvo XC60"
+```
+
+> **Icyitonderwa:** Kin ishyigikira **utwuguruzo n'utwugarizo gusa**, gukoresha akuguruzo n'akugarizo bizatera ikibazo:
+
+```Kin
+reka x = 'Ibi si byemewe' # Biratera ikibazo
+```
+
+## Imibare muri Kin (Numbers)
+
+Imibare ishobora kwandikwa ifite cyangwa itarimo utudomo(decimal points).
+
+Muri **_Kin_**, imibare ishobora kuba **integer** cyangwa **floating point**.
+
+Urugero:
+
+```Kin
+# Ifite decimals:
+reka x1 = 34.00
+
+# Itarimo decimals:
+reka x2 = 34
+```
+
+> **Icyitonderwa:** Muri **_Kin_**, ntago ishyigikira **Exponential Notation**.
+
+## Boolean muri Kin (`nibyo`, `sibyo`)
+
+Boolean ishobora kugira kuba: `nibyo` cyangwa `sibyo`.
+
+Urugero:
+
+```Kin
+reka x = 5
+reka y = 5
+reka z = 6
+(x == y)       # Isubiza nibyo
+(x == z)       # Isubiza sibyo
+```
+
+Boolean akenshi ikoreshwa mu **gupima ibisabwa (conditional testing)**.
+
+## Urutonde rw'ibintu muri Kin (Arrays)
+
+**_Kin_** arrays zandikwa ukoresheje **square brackets**.
+
+Ibice by’urutonde rw'ibintu bitandukanywa n'utwitso.
+
+Urugero rukurikira rwerekana gukora array yitwa **names**, irimo abantu batatu:
+
+```Kin
+reka names = ["John", "Doe", "Jane"]
+```
+
+**Array indexes** zitangirira kuri 0, bivuze ko igice cya mbere ari \[0], icya kabiri ni \[1], ugakomeza gutyo.
+
+Urugero:
+
+```Kin
+names[0] # Isubiza "John"
+names[1] # Isubiza "Doe"
+names[2] # Isubiza "Jane"
+```
+
+## ibyegeranyo muri Kin (Objects)
+
+**_Kin_** objects zandikwa ukoresheje **curly braces {}**.
+
+Ibiranga by'ibyegeranyo (Object properties) byandikwa gutya **izina\:agaciro**, bitandukanywa n'utwitso.
+
+Urugero:
+
+```Kin
+ntahinduka person = {firstName:"Bwenge", lastName:"Kana", age:15, eyeColor:"red"}
+```
+
+Icyegeranyo **person** gifite ibiranga (properties) 4: **firstName**, **lastName**, **age**, na **eyeColor**.
+
+Tuzaganira byinshi ku **byegeranyo (objects)** mu bindi bice by'iki gitabo.
+
+## Ubusa muri Kin (Null)
+
+Ubu ni ubwoko bwihariye bw’amakuru bushobora kugira agaciro kamwe gusa: `ubusa`. Bukoreshwa kuhagarira **kutabaho k’agaciro**.

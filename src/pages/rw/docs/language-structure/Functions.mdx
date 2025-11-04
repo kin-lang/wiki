@@ -1,0 +1,85 @@
+---
+title: 'Imimaro (Functions)'
+---
+
+# Intangiriro
+
+**_Kin_** umumaro ni igice cya code cyateguwe gukora umurimo runaka.
+
+**_Kin_** umumaro ikora iyo "ikintu" kiwuhamagaye.
+
+Urugero:
+
+```Kin
+porogaramu_ntoya function(a, b) {
+  tanga a * b
+}
+```
+
+## Imiterere y'Imimaro (Function Syntax)
+
+**_Kin_** umumaro ushyirwaho wandikwa wifashije `porogaramu_ntoya`, ugakurikiza n’izina, hanyuma ukandika n'udukubo ().
+
+Amazina y'umumaro ashobora kugira inyuguti, imibare, underscores(_), na dollar signs (amategeko ameze nk’ayi iminduragaciro).
+
+Mu dukubo hashobora gushyirwamo amazina y'ibipimo atandukanijwe n' akitso:
+(parameter1, parameter2, ...)
+
+Code izashyirwa mu bikorwa n'umumaro ishyirwa muri curly brackets: {}
+
+```Kin
+porogaramu_ntoya izina(parameter1, parameter2, parameter3) {
+  # code izakorwa
+}
+```
+
+Ibipimo by'mimaro bishyirwa mu dukubo () mu kwandika umumaro
+
+Ibipimo by'mimaro ni agaciro k'umimaro yakiriye mugihe yahamagawe.
+
+Mu mumaro, ibipimo (parameters) bikora nk'minduragaciro zo mu mumaro (local variables).
+
+## Guhamagara Umumaro (Function Invocation)
+
+Code iri mu mumaro izakora igihe "ikintu" gihamagaye (calls) umumaro:
+
+```Kin
+izinaFunction(argument1, argument2, argument3, ...)
+```
+
+## Gusubiza Agaciro (Function Return)
+
+Iyo **_Kin_** igeze ku nteruro ya `return`, umumaro urahagarika gukora.
+
+Niba umumaro wahamagawe mu itangazo, **_Kin_** izagaruka gushyira mu bikorwa code nyuma guhamagara iryo tangazo
+
+Imimaro akenshi isubiza agaciro kenshi. Agaciro gasubizwa uwahamagaye (caller) uwo mumaro:
+
+```Kin
+porogaramu_ntoya myFunction(a, b) {
+  # Function isubiza igiteranyo cya a na b
+  return a * b;
+}
+
+# Umumaro uhamagawe, agaciro gasubijwe kazajya kuri x
+reka x = myFunction(4, 3);
+```
+
+> Nyuma ya `return` ntayindi nteruro yemewe muri function
+
+Ibi rero bizatanga ikosa:
+
+```Kin
+porogaramu_ntoya function(a, b) {
+  tanga a*b
+  tangaza_amakuru("Igiteranyo ni ", a*b)
+}
+```
+
+## Impamvu yo Gukoresha Imimaro
+
+Ukoresheje imimaro ushobora gusubiramo code.
+
+Ushobora kwandika code ishobora gukoreshwa inshuro nyinshi.
+
+Ushobora gukoresha code imwe ifite ibipimo bitandukanye, ikabyara ibisubizo bitandukanye.

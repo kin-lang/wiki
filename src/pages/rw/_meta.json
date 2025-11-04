@@ -14,16 +14,5 @@
   "editor": {
     "type": "page",
     "display": "hidden"
-  },
-  "rw": {
-    "type": "page",
-    "display": "hidden"
-  },
-  "404": {
-    "type": "page",
-    "theme": {
-      "timestamp": false,
-      "typesetting": "article"
-    }
   }
 }

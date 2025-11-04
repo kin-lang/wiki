@@ -1,0 +1,106 @@
+---
+title: 'Ibyegeranyo (Objects)'
+---
+
+# Intangiriro
+
+Uramutse umaze kwiga ko iminduragaciro zo muri **_Kin_**  ari ibikoresho byo kubika amakuru.
+
+Uyu murongo uha agaciro gato (Fiat) ku ihinduragaciro yitwa `car`:
+
+```Kin
+reka car = "Fiat"
+```
+
+**Ibyegeranyo(Objects)** na zo ni iminduragaciro(variables). Ariko ibyegeranyo bishobora kubika amakuru menshi.
+
+Uyu murongo uha agaciro kenshi (`Fiat`, `500`, `white`) ku ihinduragaciro yitwa `car`:
+
+```Kin
+const car = {
+  type:"Fiat",
+  model:"500",
+  color:"white"
+}
+```
+
+Agaciro kashyizweho nk’**izina\:agaciro** (name\:value) aho izina n’agaciro byatandukanijwe n'utudomo tubiri `:`.
+
+## Gusobanura Ibyegeranyo (Object Definition)
+
+Ushobora gusobanura no gukora ibyegeranyo muri **_Kin_** ukoresheje **object literal**:
+
+```Kin
+reka person = {
+  firstName:"John",
+  lastName:"Doe",
+  age:50,
+  eyeColor:"blue"
+};
+
+# Ibi bimeze no kwandika gutya:
+reka person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+```
+
+> Intera n’imirongo si ingenzi. Ibyegeranyo bishobora kwandikwa ukoresheje imirongo myinshi.
+
+## Imiterere y'Ibyegeranyo (Object Properties)
+
+**Izina\:agaciro** mu byegeranyo bya **_Kin_** byitwa **imiterere (properties)**:
+
+| Imiterere | Agaciro k'imiterere|
+| --------- | ------------------- |
+| firstName | John                |
+| lastName  | Doe                 |
+| age       | 50                  |
+| eyeColor  | blue                |
+
+---
+
+## Gukoresha Imiterere y'Ibyegeranyo (Object Properties)
+
+Ushobora gukoresha imiterere y'ibyegeranyo mu buryo bubiri:
+
+```Kin
+objectName.propertyName
+```
+
+Cyangwa
+
+```Kin
+objectName["propertyName"]
+```
+
+## Uburyo bw'ibyegeranyo (Object Methods)
+
+Methode ni umumaro ubitswe nk'imiterere.
+
+Urugero:
+
+```Kin
+porogaramu_ntoya add(a, b) {
+  tanga a + b
+}
+
+reka obj = {
+  method: add
+}
+```
+
+> Mu rugero rwacu, icyegeranyo `obj` gifite methode yitwa `method` ishobora guteranya imibare ibiri.
+
+> **Icyitonderwa:** Ntitwatangaje methode mu cyegeranyo. Muri **_Kin_**, ntidushyigikira gutangaza methodes mu byegeranyo. Dushobora guha umumaro imiterere y'ibyegeranyo gusa.
+
+### Gukoresha Methodes z’ibyegeranyo
+
+Iyo ukoresha methode y'cyegeranyo ukoresha syntax ikurikira:
+
+```Kin
+obj.method()
+```
+
+Niba ukoresheje methode ntukoreshe `()`, bizagarura **definition ya function**:
+
+```Kin
+reka add = obj.method
+```
