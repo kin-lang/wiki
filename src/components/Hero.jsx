@@ -9,18 +9,22 @@ export default function Hero() {
       </h1>
       <div className='max-w-3xl mt-4 text-lg md:text-xl text-muted-foreground'>
         Kin is a modern, accessible language designed to help Rwandans learn
-        programming in Kinyarwanda, focusing on simplicity and education
-        rather than large-scale development.
+        programming in Kinyarwanda, focusing on simplicity and education rather
+        than large-scale development.
       </div>
       <div className='flex flex-col gap-4 mt-8 sm:flex-row'>
         <Link href={'/docs'}>
-          <Button className='w-full sm:w-auto'>
-            Documentation
+          <Button className='w-full sm:w-auto'>Documentation</Button>
+        </Link>
+        <a
+          href='https://editor.kinlang.dev'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <Button variant='secondary' className='w-full sm:w-auto'>
+            Try Kin
           </Button>
-        </Link>
-        <Link href={'/editor'}>
-          <Button variant='secondary' className='w-full sm:w-auto'>Try Kin</Button>
-        </Link>
+        </a>
       </div>
     </div>
   );
