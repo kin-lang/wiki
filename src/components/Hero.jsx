@@ -17,7 +17,7 @@ export default function Hero() {
           <Button className='w-full sm:w-auto'>Documentation</Button>
         </Link>
         <a
-          href='https://editor.kinlang.dev'
+          href='https://kin-editor.vercel.app'
           target='_blank'
           rel='noopener noreferrer'
         >
