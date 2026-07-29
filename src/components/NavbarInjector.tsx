@@ -17,7 +17,7 @@ export default function NavbarInjector() {
     const docsText = isRwandan ? 'Ibisobanuro' : 'Documentation';
     const playgroundText = isRwandan ? 'Gerageza Kin' : 'Playground';
     const docsHref = isRwandan ? '/rw/docs' : '/docs';
-    const playgroundHref = 'https://editor.kinlang.dev';
+    const playgroundHref = 'https://kin-editor.vercel.app';
 
     const isDocsActive = asPath.includes('/docs');
 
