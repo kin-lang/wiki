@@ -93,22 +93,51 @@ tangaza_amakuru(KIN_URUTONDE.ingano(ijambo))
 
 > Output: 2
 
-### Array Include
+### Array Include (`ifite`) — first element only
 
-You check if an array include a given value by using `KIN_URUTONDE.ifite()` method.
-
-Ex:
+`KIN_URUTONDE.ifite(list, value)` currently compares `value` to the **first element only**. It does not scan the rest of the list.
 
 ```Kin
 reka ijambo = ["Hello", "World"]
 tangaza_amakuru(KIN_URUTONDE.ifite(ijambo, "Hello"))
+tangaza_amakuru(KIN_URUTONDE.ifite(ijambo, "World"))
+```
+
+> First call prints `nibyo` because `"Hello"` is first.
+> Second call prints `sibyo` today, even though `"World"` is in the list.
+
+### Has key (`ifite_ikirango`)
+
+`KIN_URUTONDE.ifite_ikirango(list, key)` is true if the array/object has that **key** (`"0"`, `"1"`, … for arrays), not that value.
+
+```Kin
+reka ijambo = ["Hello", "World"]
+tangaza_amakuru(KIN_URUTONDE.ifite_ikirango(ijambo, "0"))
 ```
 
 > Output: nibyo
 
+### Push / pop (mutate in place)
+
+- `KIN_URUTONDE.ongera_kumusozo(list, value)` appends `value` **in place** and returns the **new length**.
+- `KIN_URUTONDE.siba_kumusozo(list)` removes the last entry **in place** and returns the **new length** (not the removed value).
+
+```Kin
+reka cars = ["Saab", "Volvo"]
+tangaza_amakuru(KIN_URUTONDE.ongera_kumusozo(cars, "BMW"))
+tangaza_amakuru(KIN_URUTONDE.ingano(cars))
+```
+
+> Both lines print `3`. `cars` now has three items.
+
+### Prepend / drop first (new array)
+
+- `KIN_URUTONDE.injiza_ahabanza(list, value)` returns a **new** array with `value` at index 0. The original is unchanged.
+- `KIN_URUTONDE.siba_ahabanza(list)` returns a **new** array without index 0.
+
 ### Array join
 
-You join elements of an array to make one word by using `KIN_URUTONDE.kora_ijambo()` method.
+You join elements of an array to make one word by using `KIN_URUTONDE.kora_ijambo()` method. There is no separator.
 
 Ex:
 

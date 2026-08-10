@@ -27,3 +27,20 @@ subiramo_niba (x < 100) {
 > Iyi code izandika 1, 2, 3, ..., 98, 99, 100
 
 **Condition** ishobora kuba **complex** uko ushaka!
+
+## Guhagarika uruziga na `hagarara`
+
+Mu `subiramo_niba`, andika `hagarara` kugira ngo uve mu kigeragezo ako kanya. Akadomo `;` nyuma yacyo si ngombwa. Iki ni **ijambo ry’ingenzi** (break), si `hagarara(0)` yo guhagarika porogaramu ya Kin.
+
+```Kin
+reka i = 1
+subiramo_niba (i <= 100) {
+  tangaza_amakuru(i)
+  niba (i == 5) {
+    hagarara
+  }
+  i = i + 1
+}
+```
+
+> Ibi byandika 1, 2, 3, 4, 5 hanyuma bihagarara.

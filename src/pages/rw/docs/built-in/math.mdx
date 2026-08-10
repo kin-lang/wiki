@@ -1,0 +1,54 @@
+---
+title: "Imibare (KIN_IMIBARE)"
+---
+
+# Intangiriro
+
+`KIN_IMIBARE` ni **umuryango** w’imibare yubatse muri Kin. Ntabwo uhamagarwa — andika `KIN_IMIBARE.pi`, ntukandike `KIN_IMIBARE()`.
+
+## `KIN_IMIBARE.pi`
+
+π ≈ 3.14159… ubitswe nk’umubare wa Kin. Ni property, si umumaro: `KIN_IMIBARE.pi`, si `KIN_IMIBARE.pi()`.
+
+Ushobora kubara nayo:
+
+```Kin
+tangaza_amakuru(KIN_IMIBARE.pi + 1)
+tangaza_amakuru(KIN_IMIBARE.pi * 2)
+```
+
+## Umuzikare — `umuzikare`
+
+```Kin
+tangaza_amakuru(KIN_IMIBARE.umuzikare(9))
+```
+
+> Ibisohoka: `3`
+
+## Umubare utazwi — `umubare_utazwi`
+
+Umubare wuzuye uhereye kuri `min` (ceil) kugeza kuri `max` (floor):
+
+```Kin
+reka dice = KIN_IMIBARE.umubare_utazwi(1, 6)
+tangaza_amakuru(dice)
+```
+
+## Kuraho ibice — `kuraho_ibice`
+
+`Math.round` (0.5 ijya hejuru):
+
+```Kin
+tangaza_amakuru(KIN_IMIBARE.kuraho_ibice(3.6))
+```
+
+> Ibisohoka: `4`
+
+## Ubutonde — `sin`, `cos`, `tan`
+
+Impande ziri mu **radians**, si degrees.
+
+```Kin
+tangaza_amakuru(KIN_IMIBARE.sin(KIN_IMIBARE.pi / 2))
+tangaza_amakuru(KIN_IMIBARE.cos(0))
+```

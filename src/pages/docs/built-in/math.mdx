@@ -1,0 +1,54 @@
+---
+title: "Mathematics (KIN_IMIBARE)"
+---
+
+# Intro
+
+`KIN_IMIBARE` is a **namespace** of built-in math helpers. It is not callable — write `KIN_IMIBARE.pi`, never `KIN_IMIBARE()`.
+
+## `KIN_IMIBARE.pi`
+
+The constant π ≈ 3.14159… stored as a Kin `number`. A property, not a function: `KIN_IMIBARE.pi`, not `KIN_IMIBARE.pi()`.
+
+You can compute with it:
+
+```Kin
+tangaza_amakuru(KIN_IMIBARE.pi + 1)
+tangaza_amakuru(KIN_IMIBARE.pi * 2)
+```
+
+## Square root — `umuzikare`
+
+```Kin
+tangaza_amakuru(KIN_IMIBARE.umuzikare(9))
+```
+
+> Output: `3`
+
+## Random integer — `umubare_utazwi`
+
+Inclusive integer from `min` (ceiled) to `max` (floored):
+
+```Kin
+reka dice = KIN_IMIBARE.umubare_utazwi(1, 6)
+tangaza_amakuru(dice)
+```
+
+## Rounding — `kuraho_ibice`
+
+`Math.round` (0.5 goes up):
+
+```Kin
+tangaza_amakuru(KIN_IMIBARE.kuraho_ibice(3.6))
+```
+
+> Output: `4`
+
+## Trigonometry — `sin`, `cos`, `tan`
+
+Angles are in **radians**, not degrees.
+
+```Kin
+tangaza_amakuru(KIN_IMIBARE.sin(KIN_IMIBARE.pi / 2))
+tangaza_amakuru(KIN_IMIBARE.cos(0))
+```

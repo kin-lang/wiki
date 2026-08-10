@@ -27,3 +27,20 @@ subiramo_niba (x < 100) {
 > Those codes will print 1, 2, 3, ..., 98, 99, 100
 
 A condition can be as complicated as you want!
+
+## Stopping a loop with `hagarara`
+
+Inside `subiramo_niba`, write `hagarara` to leave the loop immediately. A semicolon after it is optional. This is a **keyword** (break), not `hagarara(0)` to stop the Kin process.
+
+```Kin
+reka i = 1
+subiramo_niba (i <= 100) {
+  tangaza_amakuru(i)
+  niba (i == 5) {
+    hagarara
+  }
+  i = i + 1
+}
+```
+
+> This prints 1, 2, 3, 4, 5 and then stops.

@@ -9,10 +9,11 @@ description: >-
 
 Scope determines the accessibility (visibility) of variables.
 
-**_Kin_** variables have 2 types of scope:
+**_Kin_** variables have these kinds of scope:
 
-- Function scope
-- Global scope
+- Function scope — names declared inside `porogaramu_ntoya`
+- Block scope — each `niba` / `niba_byanze` body and each `subiramo_niba` iteration gets a fresh environment
+- Global scope — names declared at the top of the file
 
 ## Functinoal Scope
 
@@ -45,7 +46,7 @@ A variable declared outside a function, becomes GLOBAL.
 reka carName = "Volvo"
 # code here can use carName
 
-porogaramu_ntoya myFunction() \{
+porogaramu_ntoya myFunction() {
 # code here can also use carName
 }
 ```

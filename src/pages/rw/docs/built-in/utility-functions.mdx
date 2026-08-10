@@ -4,13 +4,29 @@ title: Izindi Method Zubatsemo
 
 # Intangiriro
 
-Uru ni urutonde rw’izindi **method** zubatsemo tutigeze tuvugaho muri iyi documentation.
+Uru ni urutonde rw’ibindi byubatsemo tutigeze tuvugaho muri iyi documentation.
+
+# Ibindi bizwi hose
+
+## `filename`
+
+Ni **ijambo** (string), si umumaro: inzira ya dosiye wahaye `kin run`, cyangwa ububiko bwa REPL.
+
+Buri murimo wa `KIN_INYANDIKO` ushyira inzira igoye ku bubiko `filename` irimo. Andika `filename`, si `filename()`.
+
+```Kin
+tangaza_amakuru(filename)
+```
+
+## `ikosa`
+
+Ni ihinduragaciro rusange rihinduka, ritangira riri `ubusa`. Ryateganyijwe kubika ikosa. Runtime ntiyandikamo ubwayo ubu — porogaramu yawe ni yo ishobora kuryiha agaciro.
 
 # Method
 
 ## `ubwoko()`
 
-Iyi **method** ikoreshwa kugira ngo imenye **ubwoko** bw’icyo watanze.
+Isubiza **izina ry’ubwoko bwa runtime** nk’ijambo: `"number"`, `"string"`, `"boolean"`, `"object"`, `"fn"`, `"native-fn"`, cyangwa `"null"`.
 
 Urugero:
 
@@ -19,32 +35,21 @@ reka x = 5
 tangaza_amakuru(ubwoko(x))
 ```
 
-> Ibi bizasohora `umubare`.
+> Ibi bizasohora `number` (si `umubare`). Urutonde ni `"object"`.
 
 ## `sisitemu()`
 
-Iyi **method** ikoreshwa mu gukora amategeko ya sisiteme ava muri porogaramu ya Kin.
+Ikoresha itegeko rya shell y’imashini yawe kandi isubiza stdout yayongewe nk’ijambo.
 
-Urugero:
-
-```Kin
-sisitemu("sudo shutdown now")
-```
-
-> Uyu murongo uzazimya mudasobwa.
-
-## `hagarara()`
-
-Iyi **method** ikoreshwa guhagarika Kin igihe iri gukora.
-
-Urugero:
+**Ingaruka:** iryo tegeko rikora n’uburenganzira bwawe. **Ntushyiremo** inyandiko utizeye, kandi ntukoreshe urugero nka `sudo shutdown now` mu kwiga.
 
 ```Kin
-hagarara(0)
+reka out = sisitemu("echo muraho")
+tangaza_amakuru(out)
 ```
 
-> Ibi bizahagarika porogaramu ya Kin, kandi byerekana byagenze neza.
+> Byandika `muraho`.
 
-Iyi **function** yubatswemo yakira **igipimo (argument)**, ari yo nimero:
-`0` niba ushaka ko bigenda neza
-`1` niba ushaka ko bitagenda neza.
+## Guhagarika uruziga
+
+`hagarara` ni **ijambo ry’ingenzi** riva muri `subiramo_niba`. Si `hagarara(0)` yo guhagarika porogaramu ya Kin. Reba [Ibyisubiramo](/rw/docs/language-structure/Loops).
