@@ -93,18 +93,34 @@ tangaza_amakuru(KIN_URUTONDE.ingano(ijambo))
 
 > Output: 2
 
-### Kureba niba Array Irimo Agaciro
+### Kureba niba Array Irimo Agaciro (`ifite`) — igice cya mbere gusa
 
-Ushobora kugenzura niba array irimo agaciro runaka ukoresheje `KIN_URUTONDE.ifite()`.
+`KIN_URUTONDE.ifite(list, value)` igereranya `value` n’**igice cya mbere gusa**. Ntisuzuma ibisigaye by’urutonde.
 
 Urugero:
 
 ```Kin
 reka ijambo = ["Hello", "World"]
 tangaza_amakuru(KIN_URUTONDE.ifite(ijambo, "Hello"))
+tangaza_amakuru(KIN_URUTONDE.ifite(ijambo, "World"))
 ```
 
-> Output: nibyo
+> Ihamagara rya mbere: `nibyo` kuko `"Hello"` iri imbere.
+> Irya kabiri: `sibyo` ubu, nubwo `"World"` iri mu rutonde.
+
+### Ifite ikirango (`ifite_ikirango`)
+
+`KIN_URUTONDE.ifite_ikirango(list, key)` ni `nibyo` niba ifite icyo **kirango** (`"0"`, `"1"`, …), si icyo gaciro.
+
+### Kongera / gusiba ku musozo
+
+- `KIN_URUTONDE.ongera_kumusozo(list, value)` yongera `value` ahantu hamwe, isubiza **ingano nshya**.
+- `KIN_URUTONDE.siba_kumusozo(list)` isiba icya nyuma ahantu hamwe, isubiza **ingano nshya**.
+
+### Gushyira / gusiba imbere
+
+- `KIN_URUTONDE.injiza_ahabanza(list, value)` isubiza urutonde **rushya** n’agaciro imbere.
+- `KIN_URUTONDE.siba_ahabanza(list)` isubiza urutonde **rushya** nta mwanya 0.
 
 ### Guhuza Ibice by’Imbonerahamwe
 

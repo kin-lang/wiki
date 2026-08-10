@@ -90,22 +90,51 @@ tangaza_amakuru(KIN_URUTONDE.ingano(ijambo))
 
 > Ibisohoka: 2
 
-### Kureba niba Urutonde rw'ibintu rurimo Agaciro
+### Kureba niba Urutonde rurimo Agaciro (`ifite`) — igice cya mbere gusa
 
-Ushobora kugenzura niba Urutonde rw'ibintu rurimo agaciro runaka ukoresheje `KIN_URUTONDE.ifite()`.
-
-Urugero:
+`KIN_URUTONDE.ifite(list, value)` igereranya `value` n’**igice cya mbere gusa**. Ntisuzuma ibisigaye by’urutonde.
 
 ```Kin
 reka ijambo = ["Hello", "World"]
 tangaza_amakuru(KIN_URUTONDE.ifite(ijambo, "Hello"))
+tangaza_amakuru(KIN_URUTONDE.ifite(ijambo, "World"))
+```
+
+> Ihamagara rya mbere ryandika `nibyo` kuko `"Hello"` iri imbere.
+> Irya kabiri ryandika `sibyo` ubu, nubwo `"World"` iri mu rutonde.
+
+### Ifite ikirango (`ifite_ikirango`)
+
+`KIN_URUTONDE.ifite_ikirango(list, key)` ni `nibyo` niba urutonde/icyegeranyo gifite icyo **kirango** (`"0"`, `"1"`, … ku rutonde), si icyo gaciro.
+
+```Kin
+reka ijambo = ["Hello", "World"]
+tangaza_amakuru(KIN_URUTONDE.ifite_ikirango(ijambo, "0"))
 ```
 
 > Ibisohoka: nibyo
 
+### Kongera / gusiba ku musozo (bihindura urutonde)
+
+- `KIN_URUTONDE.ongera_kumusozo(list, value)` yongera `value` **ahantu hamwe** kandi isubiza **ingano nshya**.
+- `KIN_URUTONDE.siba_kumusozo(list)` isiba icya nyuma **ahantu hamwe** kandi isubiza **ingano nshya** (si agaciro kasibwe).
+
+```Kin
+reka cars = ["Saab", "Volvo"]
+tangaza_amakuru(KIN_URUTONDE.ongera_kumusozo(cars, "BMW"))
+tangaza_amakuru(KIN_URUTONDE.ingano(cars))
+```
+
+> Imirongo yombi yandika `3`. `cars` ubu ifite ibice bitatu.
+
+### Gushyira / gusiba imbere (urutonde rushya)
+
+- `KIN_URUTONDE.injiza_ahabanza(list, value)` isubiza urutonde **rushya** `value` iri ku mwanya 0. Urwambere ntiruhinduka.
+- `KIN_URUTONDE.siba_ahabanza(list)` isubiza urutonde **rushya** nta mwanya 0.
+
 ### Guhuza Ibice by'Urutonde rw'ibintu
 
-Ushobora guhuza ibice byose by'Urutonde rw'ibintu kugira ngo bikore ijambo rimwe ukoresheje `KIN_URUTONDE.kora_ijambo()`.
+Ushobora guhuza ibice byose by'Urutonde rw'ibintu kugira ngo bikore ijambo rimwe ukoresheje `KIN_URUTONDE.kora_ijambo()`. Nta kimenyetso gitandukanya.
 
 Urugero:
 

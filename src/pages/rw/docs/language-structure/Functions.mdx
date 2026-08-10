@@ -20,7 +20,7 @@ porogaramu_ntoya function(a, b) {
 
 **_Kin_** umumaro ushyirwaho wandikwa wifashije `porogaramu_ntoya`, ugakurikiza n’izina, hanyuma ukandika n'udukubo ().
 
-Amazina y'umumaro ashobora kugira inyuguti, imibare, underscores(_), na dollar signs (amategeko ameze nk’ayi iminduragaciro).
+Amazina y'umumaro ashobora kugira inyuguti, imibare, na underscores(`_`) (amategeko ameze nk’ay’iminduragaciro). Atangira ku nyuguti cyangwa `_`. Ikimenyetso `$` ntikemewe.
 
 Mu dukubo hashobora gushyirwamo amazina y'ibipimo atandukanijwe n' akitso:
 (parameter1, parameter2, ...)
@@ -47,27 +47,27 @@ Code iri mu mumaro izakora igihe "ikintu" gihamagaye (calls) umumaro:
 izinaFunction(argument1, argument2, argument3, ...)
 ```
 
-## Gusubiza Agaciro (Function Return)
+## Gusubiza Agaciro (`tanga`)
 
-Iyo **_Kin_** igeze ku nteruro ya `return`, umumaro urahagarika gukora.
+Iyo **_Kin_** igeze ku nteruro ya `tanga`, umumaro urahagarika gukora. Ntukandike `return` — ijambo ni `tanga`.
 
-Niba umumaro wahamagawe mu itangazo, **_Kin_** izagaruka gushyira mu bikorwa code nyuma guhamagara iryo tangazo
+Niba umumaro wahamagawe mu itangazo, **_Kin_** izagaruka gushyira mu bikorwa code nyuma yo guhamagara iryo tangazo.
 
-Imimaro akenshi isubiza agaciro kenshi. Agaciro gasubizwa uwahamagaye (caller) uwo mumaro:
+Imimaro akenshi isubiza agaciro. Agaciro gasubizwa uwahamagaye (caller):
 
 ```Kin
 porogaramu_ntoya myFunction(a, b) {
-  # Function isubiza igiteranyo cya a na b
-  return a * b;
+  # Umumaro usubiza igiteranyo cya a na b
+  tanga a * b
 }
 
 # Umumaro uhamagawe, agaciro gasubijwe kazajya kuri x
-reka x = myFunction(4, 3);
+reka x = myFunction(4, 3)
 ```
 
-> Nyuma ya `return` ntayindi nteruro yemewe muri function
+> Ibyanditswe nyuma ya `tanga` muri uwo mumaro **ntibikora**. Runtime ntiyanga ikosa; isubiza gusa.
 
-Ibi rero bizatanga ikosa:
+Ibi rero ntibyandika ikindi ( `tangaza_amakuru` ntikora):
 
 ```Kin
 porogaramu_ntoya function(a, b) {

@@ -43,3 +43,10 @@ ntahinduka x = 10
 ```Kin
 ntahinduka x; # This will throw an error
 ```
+
+## Built-in names
+
+Kin also provides two globals you do not declare:
+
+- `filename` — a **string**: the path of the running `.kin` file. `KIN_INYANDIKO` resolves relative paths against its directory.
+- `ikosa` — a mutable name, initially `ubusa`. Reserved as an error holder; the runtime does not currently write to it automatically.

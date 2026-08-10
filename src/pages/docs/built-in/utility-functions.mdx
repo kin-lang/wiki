@@ -4,13 +4,29 @@ title: Other In-built Methods
 
 # Intro
 
-This is a list of other in-built methods that we haven't talked about in the documentation.
+This is a list of other built-ins that we haven't talked about in the documentation.
+
+# Globals
+
+## `filename`
+
+A **string** (not a function): the path of the file you passed to `kin run`, or the REPL working directory.
+
+Every `KIN_INYANDIKO` helper resolves relative paths against the directory of `filename`. Write `filename`, not `filename()`.
+
+```Kin
+tangaza_amakuru(filename)
+```
+
+## `ikosa`
+
+A mutable global, initially `ubusa`. It is reserved as an error holder. The runtime does not currently write to it automatically — your program may assign it.
 
 # Methods
 
 ## `ubwoko()`
 
-This method is used to get the typeof a provided argument.
+Returns the Kin **runtime type name** of its argument as a string: `"number"`, `"string"`, `"boolean"`, `"object"`, `"fn"`, `"native-fn"`, or `"null"`.
 
 Ex:
 
@@ -19,31 +35,21 @@ reka x = 5
 tangaza_amakuru(ubwoko(x))
 ```
 
-> This will print `umubare`.
+> This will print `number` (not `umubare`). Arrays are `"object"`.
 
 ## `sisitemu()`
 
-This method is used to run systems commands from Kin program.
+Runs a host-shell command and returns its trimmed stdout as a string.
 
-Ex:
-
-```Kin
-sisitemu("sudo shutdown now")
-```
-
-> This command will shutdown the computer.
-
-## `hagarara()`
-
-This method is used to stop kin while it's running.
-
-Ex:
+**Danger:** the command runs with your user permissions. Do **not** paste untrusted text, and do not use examples like `sudo shutdown now` while learning.
 
 ```Kin
-hagarara(0)
+reka out = sisitemu("echo muraho")
+tangaza_amakuru(out)
 ```
 
-> This will stop kin program, and mark the execution as sucessful.
+> Prints `muraho`.
 
-This in-built function receives an argument, which is a number,
-`0` for sucessful exection and `1` for unsucessful exectution.
+## Stopping a loop
+
+`hagarara` is a **keyword** that breaks out of `subiramo_niba`. It is not `hagarara(0)` to stop the Kin process. See [Loops](/docs/language-structure/Loops).

@@ -11,6 +11,8 @@ Gukoresha dosiye ni uburyo bworoshye bwo gukora no kuyobora imirimo kuri dosiye,
 
 Ukoresheje **_Kin_** ushobora gusoma, kwandika, kongeramo, no gusiba dosiye mu buryo bworoshye.
 
+Inzira zishyirwa ku bubiko bwa `filename` (dosiye `.kin` wakoresheje), si gusa ububiko process irimo.
+
 ## Gusoma Dosiye
 
 Ukoresheje uburyo `KIN_INYANDIKO.soma(path-to-file)`, ushobora gusoma ibirimo muri dosiye iri aho hantu (`path-to-file`).
@@ -41,7 +43,7 @@ niba (written) {
 ```
 
 > Ibirimo bizandikwa muri dosiye watanze.
-> Uburyo `KIN_INYANDIKO.andika()` busubiza agaciro ka **boolean**, `nibyo` niba byanditswe neza, cyangwa `sibyo` niba bitakunze.
+> `KIN_INYANDIKO.andika()` isubiza `nibyo` iyo byagenze neza, cyangwa **ijambo ry’ikosa** iyo byanze — si `sibyo`. Genzura `ubwoko(result)` cyangwa ugereranye na `nibyo`.
 
 ## Kongeramo (Append) muri Dosiye
 
@@ -60,10 +62,19 @@ niba (appended) {
 ```
 
 > Ibirimo bizongerwa muri dosiye watanze.
-> Uburyo `KIN_INYANDIKO.vugurura()` busubiza agaciro ka **boolean**, `nibyo` niba byongewe neza, cyangwa `sibyo` niba bitakunze.
+> `KIN_INYANDIKO.vugurura()` isubiza `nibyo` iyo byagenze neza, cyangwa **ijambo ry’ikosa** iyo byanze — si `sibyo`.
 
 ## Gusiba Dosiye
 
 Ukoresheje uburyo `KIN_INYANDIKO.siba(path-to-file)`, ushobora gusiba dosiye iri aho hantu (`path-to-file`).
 
-> Turagusaba kugenzura niba imirimo yakozwe neza cyangwa niba byanze, kugira ngo wemeze ko byose byarangiye neza nk’uko byifuzwa.
+```Kin
+reka removed = KIN_INYANDIKO.siba("path-to-file")
+niba (removed == nibyo) {
+  tangaza_amakuru("dosiye yasibwe")
+} niba_byanze {
+  tangaza_amakuru(removed)
+}
+```
+
+> Isubiza `nibyo` iyo byagenze neza, cyangwa **ijambo ry’ikosa** iyo byanze — si `sibyo`.

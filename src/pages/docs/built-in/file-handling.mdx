@@ -11,6 +11,8 @@ File Handling is a seamless way to deal and do operations on files, and it is a 
 
 With **_Kin_** you can easity read, write, append, and delete files.
 
+Paths are resolved relative to the directory of the global `filename` (the `.kin` file you ran), not only the process working directory.
+
 ## Reading Files
 
 By using `KIN_INYANDIKO.soma(path-to-file)` method, you can read the content of a file located in `path-to-file`.
@@ -41,7 +43,7 @@ niba (written) {
 ```
 
 > Content will be written to the provided file.
-> `KIN_INYANDIKO.andika()` method returns a boolean value, `nibyo` if the content is written successfully, `sibyo` otherwise.
+> `KIN_INYANDIKO.andika()` returns `nibyo` on success, or an **error message string** on failure — never `sibyo`. Check `ubwoko(result)` or compare to `nibyo`.
 
 ## Appending to a File
 
@@ -60,10 +62,19 @@ niba (appended) {
 ```
 
 > Content will be appended to the provided file.
-> `KIN_INYANDIKO.vugurura()` method returns a boolean value, `nibyo` if the content is appended successfully, `sibyo` otherwise.
+> `KIN_INYANDIKO.vugurura()` returns `nibyo` on success, or an **error message string** on failure — never `sibyo`.
 
 ## Deleting Files
 
 By using `KIN_INYANDIKO.siba(path-to-file)` method, you can delete a file located at `path-to-file`.
 
-> We advise to check where the operation was successful or not in other to ensure that the operation was completed successfully with desired output.
+```Kin
+reka removed = KIN_INYANDIKO.siba("path-to-file")
+niba (removed == nibyo) {
+  tangaza_amakuru("dosiye yasibwe")
+} niba_byanze {
+  tangaza_amakuru(removed)
+}
+```
+
+> Returns `nibyo` on success, or an **error message string** on failure — never `sibyo`.
