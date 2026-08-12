@@ -26,16 +26,17 @@ A mutable global, initially `ubusa`. It is reserved as an error holder. The runt
 
 ## `ubwoko()`
 
-Returns the Kin **runtime type name** of its argument as a string: `"number"`, `"string"`, `"boolean"`, `"object"`, `"fn"`, `"native-fn"`, or `"null"`.
+Returns the Kin **runtime type name** of its argument as a string: `"number"`, `"string"`, `"boolean"`, `"object"`, `"urutonde"` (arrays), `"fn"`, `"native-fn"`, or `"null"`.
 
 Ex:
 
 ```Kin
 reka x = 5
 tangaza_amakuru(ubwoko(x))
+tangaza_amakuru(ubwoko([1, 2]))
 ```
 
-> This will print `number` (not `umubare`). Arrays are `"object"`.
+> Prints `number`, then `urutonde`.
 
 ## `sisitemu()`
 

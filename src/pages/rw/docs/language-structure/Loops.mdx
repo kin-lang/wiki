@@ -44,3 +44,20 @@ subiramo_niba (i <= 100) {
 ```
 
 > Ibi byandika 1, 2, 3, 4, 5 hanyuma bihagarara.
+
+## Gusimbuka kigeragezo na `komeza`
+
+Mu `subiramo_niba`, andika `komeza` kugira ngo usimbuke ibisigaye by’ako kigeragezo hanyuma usuzume condition inshuro ikurikira. Akadomo `;` nyuma yacyo si ngombwa. `komeza` ikoreshwa **gusa** mu kizunguruka (si muri porogaramu_ntoya yahamagajwe gusa kuva mu kizunguruka).
+
+```Kin
+reka i = 0
+subiramo_niba (i < 5) {
+  i = i + 1
+  niba (i == 3) {
+    komeza
+  }
+  tangaza_amakuru(i)
+}
+```
+
+> Ibi byandika 1, 2, 4, 5 (3 irasimbutswe).
