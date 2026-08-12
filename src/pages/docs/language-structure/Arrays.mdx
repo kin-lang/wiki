@@ -93,9 +93,9 @@ tangaza_amakuru(KIN_URUTONDE.ingano(ijambo))
 
 > Output: 2
 
-### Array Include (`ifite`) — first element only
+### Array Include (`ifite`)
 
-`KIN_URUTONDE.ifite(list, value)` currently compares `value` to the **first element only**. It does not scan the rest of the list.
+`KIN_URUTONDE.ifite(list, value)` is `nibyo` when any element equals `value` (numbers, strings, and booleans are compared by value). You can also write `list.ifite(value)`.
 
 ```Kin
 reka ijambo = ["Hello", "World"]
@@ -103,8 +103,7 @@ tangaza_amakuru(KIN_URUTONDE.ifite(ijambo, "Hello"))
 tangaza_amakuru(KIN_URUTONDE.ifite(ijambo, "World"))
 ```
 
-> First call prints `nibyo` because `"Hello"` is first.
-> Second call prints `sibyo` today, even though `"World"` is in the list.
+> Both calls print `nibyo`.
 
 ### Has key (`ifite_ikirango`)
 

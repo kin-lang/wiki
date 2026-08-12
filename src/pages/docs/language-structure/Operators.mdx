@@ -29,7 +29,9 @@ x = 1 + 5
 | ^        | Exponentiation               |
 | %        | Modulus (Division Remainder) |
 
-> **Note**: If you perform arithmetic operations to strings you'll get `ubusa`. Arithmetic operations on work on numbers and expressions.
+> **Note**: `+` on two strings concatenates them. A string and a number also concatenate (the number is coerced), so `"Ufite imyaka " + 25` works. Other arithmetic operators (`-`, `*`, `/`, `%`, `^`) require numbers; mismatched types raise a Kin error instead of returning `ubusa`.
+>
+> `^` is right-associative and binds tighter than `*` / `/` (`2 ^ 3 ^ 2` is `512`, `2 * 3 ^ 2` is `18`). Unary minus works on numbers and variables (`-x`).
 
 ## Assignment Operator
 

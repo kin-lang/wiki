@@ -44,3 +44,20 @@ subiramo_niba (i <= 100) {
 ```
 
 > This prints 1, 2, 3, 4, 5 and then stops.
+
+## Skipping an iteration with `komeza`
+
+Inside `subiramo_niba`, write `komeza` to skip the rest of the current iteration and check the condition again. A semicolon after it is optional. `komeza` is only valid inside a loop (not inside a function that is merely called from a loop).
+
+```Kin
+reka i = 0
+subiramo_niba (i < 5) {
+  i = i + 1
+  niba (i == 3) {
+    komeza
+  }
+  tangaza_amakuru(i)
+}
+```
+
+> This prints 1, 2, 4, 5 (3 is skipped).

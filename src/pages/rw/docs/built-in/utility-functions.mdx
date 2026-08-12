@@ -26,16 +26,17 @@ Ni ihinduragaciro rusange rihinduka, ritangira riri `ubusa`. Ryateganyijwe kubik
 
 ## `ubwoko()`
 
-Isubiza **izina ry’ubwoko bwa runtime** nk’ijambo: `"number"`, `"string"`, `"boolean"`, `"object"`, `"fn"`, `"native-fn"`, cyangwa `"null"`.
+Isubiza **izina ry’ubwoko bwa runtime** nk’ijambo: `"number"`, `"string"`, `"boolean"`, `"object"`, `"urutonde"` (urutonde), `"fn"`, `"native-fn"`, cyangwa `"null"`.
 
 Urugero:
 
 ```Kin
 reka x = 5
 tangaza_amakuru(ubwoko(x))
+tangaza_amakuru(ubwoko([1, 2]))
 ```
 
-> Ibi bizasohora `number` (si `umubare`). Urutonde ni `"object"`.
+> Ibi byasohora `number`, hanyuma `urutonde`.
 
 ## `sisitemu()`
 
