@@ -54,6 +54,8 @@ tangaza_amakuru(keza.izina_ryose())
 
 - Every class method needs `rusange` or `bwite` before `porogaramu_ntoya`.
 - Accessing `instance.method` returns a **bound method** — the receiver (`_`) is kept if you store and call later.
+- Field names take precedence over methods on the same name (avoid reusing a field name as a method name).
+- Freestanding `porogaramu_ntoya` functions (including nested helpers) do **not** inherit private access, even when called from a method.
 
 ```Kin
 reka f = keza.kwibwira
