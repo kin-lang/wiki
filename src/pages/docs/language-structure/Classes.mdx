@@ -87,7 +87,7 @@ reka m = rema Umwarimu("Keza", 28)
 
 ## Types with `ubwoko`
 
-`ubwoko` is a **prefix operator** that yields a type value (not a string name for identity checks):
+`ubwoko` is a **prefix operator** that yields a **type value** (used for identity checks). When printed it shows a name such as `umubare`.
 
 ```Kin
 tangaza_amakuru(ubwoko keza == Umuntu)   # nibyo
@@ -98,8 +98,28 @@ tangaza_amakuru(ubwoko 5 == ubwoko "5")  # sibyo
 - `ubwoko` of an instance is the **class value** (exact match; no ancestor walk).
 - User functions and builtins share one function type value.
 - Parenthesized form `ubwoko(x)` still works.
+- The same keyword declares structural aliases: `ubwoko Id = ijambo | umubare`.
+
+### Class names as annotations
+
+After `imiterere Umuntu { … }`, you can annotate bindings with the **exact** class:
+
+```Kin
+reka keza: Umuntu = rema Umuntu("Keza", 20)
+
+# Child is NOT assignable to the parent type annotation
+# reka x: Umuntu = rema Umwarimu("K", 28)  # type error
+```
+
+Methods and constructors may also use typed parameters and return types (`umubare`, `ijambo`, class names, …).
 
 ## Plain objects vs classes
+
+| | Object literal | `imiterere` class |
+|--|----------------|-------------------|
+| Value kind | `ubwoko_imiterere` | instance of a named class |
+| Shape | Ad-hoc keys | Fields from `tegura` + methods |
+| Type check | Structural `ubwoko` alias or `ubwoko_imiterere` | Exact class annotation |
 
 Object literals (`{ izina: "K" }`) remain quick bags of values.  
 `imiterere` is a named shape with fixed fields and methods.
