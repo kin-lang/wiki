@@ -1,0 +1,63 @@
+---
+title: Modules n’Import
+---
+
+# Amadosiye menshi (`koresha`)
+
+Porogaramu za Kin zishobora kugabanywa mu madosiye menshi. Module **yohereza** amazina yatoranijwe;
+indi dosiye **ikoresha** ayo nk’**icyegeranyo** (namespace) gifite izina (alias).
+
+Urugero: `examples/importing/` muri repo y’ururimi.
+
+## Amagambo y’ingenzi
+
+| Ijambo | Icyo rikora |
+| --- | --- |
+| `koresha` | Gukoresha (import) module |
+| `nka` | Izina ry’alias (nk’*as* mu Cyongereza) |
+| `emerera_gukoresha` | Amazina yoherejwe (export) |
+
+## Kohereza (export)
+
+```Kin
+porogaramu_ntoya guteranya(a: umubare, b: umubare): umubare {
+  tanga a + b
+}
+
+emerera_gukoresha {
+  guteranya
+}
+```
+
+- Amazina yoherejwe gusa ni ayanditswe muri `emerera_gukoresha`.
+- Ushobora kohereza iminduragaciro, imimaro, n’imiterere.
+- Izina ridahari → **K046**.
+
+## Gukoresha (import)
+
+```Kin
+koresha "./methods.kin" nka arithmeticMethods
+koresha "./constants.kin" nka constants
+
+reka x: umubare = arithmeticMethods.guteranya(2, 3) + constants.THRESHOLD
+```
+
+- Inzira iva kuri dosiye **irimo gukoresha**.
+- `nka alias` ishyira object y’ibyo byoherejwe.
+- Geraho: `alias.izina`.
+- Path imwe ifatwa rimwe (cache). Uruziga → **K045**. Dosiye idahari → **K044**.
+
+## Imiterere n’ubwoko
+
+```Kin
+koresha "./person.kin" nka people
+reka keza: Umuntu = rema people.Umuntu("Keza", 20)
+```
+
+- `rema people.Umuntu(...)` ikoresha agaciro k’imiterere.
+- Ubwoko bw’imiterere bushobora kwandikwa n’izina rya gusa mu kirango (`: Umuntu`).
+
+## Icyitonderwa
+
+- Hitamo modules nto n’urutonde rwa `emerera_gukoresha` rusobanutse.
+- `kin check` isuzuma dosiye imwe; ntiyikurikira `koresha` ubu.
