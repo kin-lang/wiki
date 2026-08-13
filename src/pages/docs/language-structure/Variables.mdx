@@ -44,6 +44,50 @@ ntahinduka x = 10
 ntahinduka x; # This will throw an error
 ```
 
+## Optional type annotations
+
+You can attach a **type annotation** after the variable name. That turns on
+**runtime type checks** for that binding only (at declaration and on every
+later assignment). Names without an annotation stay fully dynamic.
+
+```Kin
+reka age: number = 25
+reka name: string = "Keza"
+ntahinduka PI: number = 3.14
+```
+
+### Required vs optional types
+
+| Form | Meaning |
+|------|---------|
+| `: type` | **Required** — value must match the type; `ubusa` is rejected |
+| `: type?` | **Optional** — value may be the type **or** `ubusa` |
+
+```Kin
+reka score: number = 10     # required number
+reka maybe: number? = ubusa # optional number (null allowed)
+reka later: string?;        # optional string, starts as ubusa
+```
+
+Built-in type names match what `ubwoko` reports:
+
+- `number`, `string`, `boolean`, `object`, `urutonde` (arrays), `fn` (user or built-in functions)
+
+```Kin
+reka list: urutonde = [1, 2, 3]
+reka print: fn = tangaza_amakuru
+
+# Wrong type → TypeError (K033)
+# reka x: number = "nope"
+
+# Required type with no value → TypeError (K034)
+# reka y: number;
+```
+
+> **Type safety is opt-in per variable.** Unannotated variables still accept any
+> type over their lifetime. A future release may add a file-level switch to
+> require annotations everywhere.
+
 ## Built-in names
 
 Kin also provides two globals you do not declare:

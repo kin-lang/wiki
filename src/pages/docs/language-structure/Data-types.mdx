@@ -47,17 +47,21 @@ ntahinduka person = {firstName:"John", lastName:"Doe"}
 ntahinduka cars = ["Saab", "Volvo", "BMW"]
 ```
 
-> **_Note:_** a **_Kin_** variable can hold any type of data.
+> **_Note:_** By default a **_Kin_** variable can hold any type of data.
 
 ## Kin Types are Dynamic
 
-**_Kin_** has dynamic types. This means that the same variable can be used to hold different data types:
+**_Kin_** has dynamic types. This means that the same **unannotated** variable can be used to hold different data types:
 
 ```Kin
 reka x;       # Now x is ubusa. The semicolon is required when you omit the value.
 x = 5         # Now x is a Number
 x = "John"    # Now x is a String
 ```
+
+You can **opt in** to fixed types with an annotation after the name (`: type` or
+`: type?`). See [Variables](/docs/language-structure/Variables#optional-type-annotations)
+for required vs optional types and the list of built-in type names.
 
 ## Kin Strings
 

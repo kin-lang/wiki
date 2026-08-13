@@ -44,6 +44,38 @@ ntahinduka x = 10
 ntahinduka x; # Bizatera ikibazo
 ```
 
+## Ubwoko bw'ihinduragaciro (optional type annotations)
+
+Ushobora gushyira **ubwoko** nyuma y'izina ry'ihinduragaciro. Ibyo bituma
+**kugenzura ubwoko** mu gihe porogaramu ikora (igihe utangaza no iyo uhindura
+agaciro). Izina ritagize ubwoko rikomeza kuba rishobora guhindura ubwoko.
+
+```Kin
+reka age: number = 25
+reka name: string = "Keza"
+ntahinduka PI: number = 3.14
+```
+
+### Ubwoko ngombwa n'ubwoko bushoboka
+
+| Imiterere | Icyo bisobanura |
+|-----------|-----------------|
+| `: type` | **Ngombwa** — agaciro kigomba kuba ubwo ubwoko; `ubusa` ntiyemerewe |
+| `: type?` | **Bishoboka** — agaciro gashobora kuba ubwo ubwoko **cyangwa** `ubusa` |
+
+```Kin
+reka score: number = 10     # umubare ngombwa
+reka maybe: number? = ubusa # umubare ushobora kuba ubusa
+reka later: string?;        # string ishoboka, itangira nk'ubusa
+```
+
+Amazina y'ubwoko ahuza n'ibyo `ubwoko` isubiza:
+
+- `number`, `string`, `boolean`, `object`, `urutonde`, `fn`
+
+> **Kugenzura ubwoko ni guhitamo kuri buri ihinduragaciro.** Amatangazo
+> nta annotation akomeza kwemera ubwoko ubwo ari bwo bwose.
+
 ## Amazina yubatsemo
 
 Kin itanga kandi amazina abiri utatangaza:
