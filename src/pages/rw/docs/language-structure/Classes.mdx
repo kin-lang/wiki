@@ -1,0 +1,46 @@
+---
+title: Imiterere (OOP)
+---
+
+# Imiterere (`imiterere`)
+
+Kin ishyigikira uburyo bwa OOP: imiterere, instances, methods, visibility, n’umwanduro umwe.
+
+Urugero ruri muri repo ya ururimi: `examples/oop/`.
+
+## Amagambo y’ingenzi
+
+| Ijambo | Icyo rikora |
+| --- | --- |
+| `imiterere` | Gutangaza imiterere |
+| `tegura` | Constructor |
+| `rema` | Gukora instance |
+| `_` | Instance y’ubu (muri tegura / methods) |
+| `rusange` / `bwite` | Public / private |
+| `ikomoka` | Umwanduro umwe |
+
+## Urugero
+
+```Kin
+imiterere Umuntu {
+  tegura(izina, imyaka) {
+    rusange _.izina = izina
+    rusange _.imyaka = imyaka
+  }
+
+  rusange porogaramu_ntoya kwibwira() {
+    tangaza_amakuru("Nitwa ", _.izina)
+  }
+}
+
+reka keza: Umuntu = rema Umuntu("Keza", 20)
+tangaza_amakuru(ubwoko keza == Umuntu)
+```
+
+## Ubwoko n’imiterere
+
+- `ubwoko` ku instance isubiza **agaciro k’imiterere** (ntibugera ku babyeyi).
+- Izina ry’imiterere rishobora gukoreshwa nk’ikirango cy’ubwoko: `reka x: Umuntu = rema Umuntu(...)`.
+- Object literal `{…}` ni `ubwoko_imiterere`, si instance.
+
+Reba kandi [Ubwoko bw’amakuru](/rw/docs/language-structure/Data-types).

@@ -24,19 +24,29 @@ Ni ihinduragaciro rusange rihinduka, ritangira riri `ubusa`. Ryateganyijwe kubik
 
 # Method
 
-## `ubwoko()`
+## `ubwoko` (ikimenyetso cya mbere cy’ubwoko)
 
-Isubiza **izina ry’ubwoko bwa runtime** nk’ijambo: `"number"`, `"string"`, `"boolean"`, `"object"`, `"urutonde"` (urutonde), `"fn"`, `"native-fn"`, cyangwa `"null"`.
+`ubwoko` ni **ijambo ry’ingenzi / ikimenyetso cya mbere** (gishira imbere y’ibimenyetso bya binary). Gisubiza **agaciro k’ubwoko**, si ijambo:
+
+- Ku bintu bya primitive n’ibindi: tags zisa, nuko `ubwoko 5 == ubwoko 10` ari nibyo.
+- Ku instance y’imiterere: agaciro k’imiterere (`ubwoko keza == Umuntu`).
+- Porogaramu_ntoya n’imirimo ya sisiteme bafite ubwoko bumwe bwa `fn`.
+- `ubwoko(x)` mu makugiro biracyakora.
+
+Iyo byanditswe, agaciro k’ubwoko kagaragaza amazina nka `number`, `string`, `urutonde`, `fn`, `class`.
 
 Urugero:
 
 ```Kin
 reka x = 5
-tangaza_amakuru(ubwoko(x))
-tangaza_amakuru(ubwoko([1, 2]))
+tangaza_amakuru(ubwoko x)
+tangaza_amakuru(ubwoko [1, 2])
+tangaza_amakuru(ubwoko 5 == ubwoko 10)
 ```
 
-> Ibi byasohora `number`, hanyuma `urutonde`.
+> Bisohora `number`, hanyuma `urutonde`, hanyuma `nibyo`.
+
+Soma kandi [Imiterere (OOP)](/rw/docs/language-structure/Classes).
 
 ## `sisitemu()`
 

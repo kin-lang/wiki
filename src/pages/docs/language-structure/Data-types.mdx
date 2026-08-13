@@ -65,8 +65,10 @@ See [Variables](/docs/language-structure/Variables#optional-type-annotations).
 
 ## Type aliases (`ubwoko`)
 
-Declare a named type with the `ubwoko` keyword. The same word is also the
-runtime typeof function: `ubwoko(x)` returns a type name such as `"umubare"`.
+Declare a named type with the `ubwoko` keyword. The same word is also a
+**prefix typeof operator**: `ubwoko(x)` / `ubwoko x` yields a **type value**
+(identity-comparable; prints as e.g. `umubare`). For class instances it returns
+the class value itself — see [Classes](/docs/language-structure/Classes).
 
 Object types, unions, and `Fata` (pick keys) are supported. Types may nest:
 
