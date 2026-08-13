@@ -44,6 +44,48 @@ ntahinduka x = 10
 ntahinduka x; # Bizatera ikibazo
 ```
 
+## Ubwoko bw'ihinduragaciro
+
+Ushobora gushyira **ikirango cy'ubwoko** nyuma y'izina ry'ihinduragaciro.
+Ubwoko **butajyanywe** — butokenizwa, buparswa, kandi bugenzurwa igihe
+porogaramu ikora (igihe utangaza no iyo uhindura agaciro).
+
+```Kin
+reka age: umubare = 25
+reka name: ijambo = "Keza"
+ntahinduka PI: umubare = 3.14
+```
+
+Iyo ubwoko butahuza n'agaciro, haba ikosa:
+
+```Kin
+reka name: ijambo = 42
+# Ntushobora guha umubare kuri ijambo, byari biteganyijwe ijambo
+```
+
+Iminduragaciro **idafite** ikirango ikomeza guhinduka (dynamic).
+
+### Ubwoko ngombwa n'ubwoko bushoboka
+
+| Imiterere | Icyo bisobanura |
+|-----------|-----------------|
+| `: type` | **Ngombwa** — agaciro kigomba kuba ubwo ubwoko; `ubusa` ntiyemerewe |
+| `: type?` | **Bishoboka** — agaciro gashobora kuba ubwo ubwoko **cyangwa** `ubusa` |
+
+```Kin
+reka score: umubare = 10     # umubare ngombwa
+reka maybe: umubare? = ubusa # umubare ushobora kuba ubusa
+reka later: ijambo?;         # ijambo rishoboka, ritangira nk'ubusa
+```
+
+### Amazina y'ubwoko
+
+Amazina yubatsemo (mu Kinyarwanda): `umubare`, `ijambo`, `ukuri`, `ubwoko_imiterere`,
+`urutonde`, `porogaramu_ntoya`, `_porogaramu_ntoya`, na `ubusa`.
+
+Ushobora kandi gukoresha amazina ya **`ubwoko`** (ubwoko_imiterere, union, `Fata`).
+Reba [Ubwoko bw'Amakuru](/rw/docs/language-structure/Data-types).
+
 ## Amazina yubatsemo
 
 Kin itanga kandi amazina abiri utatangaza:

@@ -47,16 +47,69 @@ ntahinduka person = {firstName:"John", lastName:"Doe"}
 ntahinduka cars = ["Saab", "Volvo", "BMW"]
 ```
 
-> **_Note:_** a **_Kin_** variable can hold any type of data.
+> **_Note:_** By default an **unannotated** **_Kin_** variable can hold any type of data.
 
-## Kin Types are Dynamic
+## Kin Types are Dynamic (unless annotated)
 
-**_Kin_** has dynamic types. This means that the same variable can be used to hold different data types:
+**_Kin_** has dynamic types for unannotated bindings. The same name can hold different data types:
 
 ```Kin
 reka x;       # Now x is ubusa. The semicolon is required when you omit the value.
 x = 5         # Now x is a Number
 x = "John"    # Now x is a String
+```
+
+You can **opt in** to fixed types with an annotation (`: type` or `: type?`).
+Annotations are tokenized and parsed (not erased) and checked at runtime.
+See [Variables](/docs/language-structure/Variables#optional-type-annotations).
+
+## Type aliases (`ubwoko`)
+
+Declare a named type with the `ubwoko` keyword. The same word is also the
+runtime typeof function: `ubwoko(x)` returns a type name such as `"umubare"`.
+
+Object types, unions, and `Fata` (pick keys) are supported. Types may nest:
+
+```Kin
+ubwoko Address = {
+  city: ijambo,
+  street: ijambo
+}
+
+ubwoko Person = {
+  name: ijambo,
+  age: umubare,
+  address: Address
+}
+
+ubwoko Id = ijambo | umubare
+
+ubwoko PersonName = Fata<Person, "name">
+ubwoko PersonNameAge = Fata<Person, "name" | "age">
+
+reka keza: Person = {
+  name: "Keza",
+  age: 20,
+  address: { city: "Kigali", street: "KG 1" }
+}
+
+reka id: Id = "A-1"
+reka onlyName: PersonName = { name: "Keza" }
+```
+
+| Feature | Syntax | Meaning |
+|---------|--------|---------|
+| Object type | `{ key: type, ... }` | Structural shape of an object (`ubwoko_imiterere`) |
+| Union | `A \| B` | Value may be either type |
+| Fata | `Fata<T, "a" \| "b">` | Object type with only the listed keys |
+| Optional | `type?` | Type or `ubusa` |
+| Nesting | `address: Address` | Property typed with another named type |
+
+Mismatch example:
+
+```Kin
+reka name: ijambo = 42
+# Cannot assign a umubare to a ijambo, expected a ijambo instead.
 ```
 
 ## Kin Strings

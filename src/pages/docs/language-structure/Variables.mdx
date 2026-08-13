@@ -44,6 +44,64 @@ ntahinduka x = 10
 ntahinduka x; # This will throw an error
 ```
 
+## Optional type annotations
+
+You can attach a **type annotation** after the variable name. Types are
+**tokenized, parsed, and kept on the AST** — they are not stripped. When a
+binding is annotated, Kin checks the value at **declaration** and on every
+later **assignment**.
+
+```Kin
+reka age: umubare = 25
+reka name: ijambo = "Keza"
+ntahinduka PI: umubare = 3.14
+```
+
+A mismatch raises a clear type error:
+
+```Kin
+reka name: ijambo = 42
+# Cannot assign a umubare to a ijambo, expected a ijambo instead.
+```
+
+Unannotated bindings stay dynamic (you may reassign different kinds of values).
+
+### Required vs optional types
+
+| Form | Meaning |
+|------|---------|
+| `: type` | **Required** — value must match the type; `ubusa` is rejected |
+| `: type?` | **Optional** — value may be the type **or** `ubusa` |
+
+```Kin
+reka score: umubare = 10     # required number
+reka maybe: umubare? = ubusa # optional number (null allowed)
+reka later: ijambo?;         # optional string, starts as ubusa
+```
+
+### Annotation type names
+
+Built-in names (Kinyarwanda):
+
+| Name | Meaning |
+|------|---------|
+| `umubare` | number |
+| `ijambo` | string |
+| `ukuri` | boolean |
+| `ubwoko_imiterere` | plain object |
+| `urutonde` | array |
+| `porogaramu_ntoya` | function (user or native) |
+| `_porogaramu_ntoya` | native function (synonym of the above for annotations) |
+| `ubusa` | null |
+
+You can also use **named type aliases** declared with `ubwoko` (object shapes,
+unions, `Fata`). See [Data Types](/docs/language-structure/Data-types).
+
+```Kin
+reka list: urutonde = [1, 2, 3]
+reka print: porogaramu_ntoya = tangaza_amakuru
+```
+
 ## Built-in names
 
 Kin also provides two globals you do not declare:
