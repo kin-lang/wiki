@@ -11,7 +11,7 @@ title: 'Imimaro (Functions)'
 Urugero:
 
 ```Kin
-porogaramu_ntoya function(a, b) {
+porogaramu_ntoya multiply(a: umubare, b: umubare): umubare {
   tanga a * b
 }
 ```
@@ -22,20 +22,18 @@ porogaramu_ntoya function(a, b) {
 
 Amazina y'umumaro ashobora kugira inyuguti, imibare, na underscores(`_`) (amategeko ameze nk’ay’iminduragaciro). Atangira ku nyuguti cyangwa `_`. Ikimenyetso `$` ntikemewe.
 
-Mu dukubo hashobora gushyirwamo amazina y'ibipimo atandukanijwe n' akitso:
-(parameter1, parameter2, ...)
-
-Code izashyirwa mu bikorwa n'umumaro ishyirwa muri curly brackets: {}
+Mu dukubo hashobora gushyirwamo amazina y'ibipimo (n’ubwoko bwabyo) atandukanijwe n' akitso.
+Nyuma ya `)` ushobora gushyira ubwoko bwo gusubiza:
 
 ```Kin
-porogaramu_ntoya izina(parameter1, parameter2, parameter3) {
+porogaramu_ntoya izina(parameter1: umubare, parameter2: ijambo): ijambo {
   # code izakorwa
 }
 ```
 
-Ibipimo by'mimaro bishyirwa mu dukubo () mu kwandika umumaro
-
-Ibipimo by'mimaro ni agaciro k'umimaro yakiriye mugihe yahamagawe.
+Ibipimo by'mimaro bishyirwa mu dukubo () mu kwandika umumaro.
+Niba parameter ifite ubwoko, Kin igenzura agaciro iyo umumaro uhamagawe.
+Niba ufite ubwoko bwo gusubiza, Kin igenzura agaciro ka `tanga`.
 
 Mu mumaro, ibipimo (parameters) bikora nk'minduragaciro zo mu mumaro (local variables).
 
@@ -56,13 +54,13 @@ Niba umumaro wahamagawe mu itangazo, **_Kin_** izagaruka gushyira mu bikorwa cod
 Imimaro akenshi isubiza agaciro. Agaciro gasubizwa uwahamagaye (caller):
 
 ```Kin
-porogaramu_ntoya myFunction(a, b) {
+porogaramu_ntoya myFunction(a: umubare, b: umubare): umubare {
   # Umumaro usubiza igiteranyo cya a na b
   tanga a * b
 }
 
 # Umumaro uhamagawe, agaciro gasubijwe kazajya kuri x
-reka x = myFunction(4, 3)
+reka x: umubare = myFunction(4, 3)
 ```
 
 > Ibyanditswe nyuma ya `tanga` muri uwo mumaro **ntibikora**. `tanga` iva muri porogaramu_ntoya ako kanya.

@@ -46,15 +46,25 @@ ntahinduka x; # This will throw an error
 
 ## Optional type annotations
 
-You can attach a **type annotation** after the variable name. That turns on
-**runtime type checks** for that binding (at declaration and on every later
-assignment), when type safety is enabled (the default).
+You can attach a **type annotation** after the variable name. Types are
+**tokenized, parsed, and kept on the AST** — they are not stripped. When a
+binding is annotated, Kin checks the value at **declaration** and on every
+later **assignment**.
 
 ```Kin
-reka age: number = 25
-reka name: string = "Keza"
-ntahinduka PI: number = 3.14
+reka age: umubare = 25
+reka name: ijambo = "Keza"
+ntahinduka PI: umubare = 3.14
 ```
+
+A mismatch raises a clear type error:
+
+```Kin
+reka name: ijambo = 42
+# Cannot assign a umubare to a ijambo, expected a ijambo instead.
+```
+
+Unannotated bindings stay dynamic (you may reassign different kinds of values).
 
 ### Required vs optional types
 
@@ -64,44 +74,32 @@ ntahinduka PI: number = 3.14
 | `: type?` | **Optional** — value may be the type **or** `ubusa` |
 
 ```Kin
-reka score: number = 10     # required number
-reka maybe: number? = ubusa # optional number (null allowed)
-reka later: string?;        # optional string, starts as ubusa
+reka score: umubare = 10     # required number
+reka maybe: umubare? = ubusa # optional number (null allowed)
+reka later: ijambo?;         # optional string, starts as ubusa
 ```
 
 ### Annotation type names
 
-Allowed names: `number`, `string`, `boolean`, `object`, `urutonde` (arrays),
-`fn`, and `native-fn` (a synonym of `fn`).
+Built-in names (Kinyarwanda):
 
-**Note:** `ubwoko` still reports the raw runtime tag. Built-in functions such as
-`tangaza_amakuru` print as `"native-fn"`, while user functions print as `"fn"`.
-Annotations use `fn` for **both** (and accept writing `: native-fn` as well).
+| Name | Meaning |
+|------|---------|
+| `umubare` | number |
+| `ijambo` | string |
+| `ukuri` | boolean |
+| `ubwoko_imiterere` | plain object |
+| `urutonde` | array |
+| `porogaramu_ntoya` | function (user or native) |
+| `_porogaramu_ntoya` | native function (synonym of the above for annotations) |
+| `ubusa` | null |
+
+You can also use **named type aliases** declared with `ubwoko` (object shapes,
+unions, `Fata`). See [Data Types](/docs/language-structure/Data-types).
 
 ```Kin
 reka list: urutonde = [1, 2, 3]
-reka print: fn = tangaza_amakuru   # also: reka print: native-fn = tangaza_amakuru
-tangaza_amakuru(ubwoko(print))     # prints: native-fn
-```
-
-### Enable / disable type safety (file or global)
-
-| Mode | Meaning |
-|------|---------|
-| `on` (default) | Annotated bindings are checked; unannotated stay dynamic |
-| `off` | Type safety off — annotations are ignored |
-| `strict` | Every `reka` / `ntahinduka` **must** have a type annotation |
-
-Set the mode in any of these ways (highest priority first):
-
-1. CLI: `kin run --types off file.kin` or `kin run --types strict file.kin`
-2. File directive (special comment): `# kin-types: off` or `# kin-types: strict`
-3. Environment: `KIN_TYPES=off` or `KIN_TYPES=strict`
-
-```Kin
-# kin-types: strict
-reka age: number = 25   # required
-# reka x = 1            # error under strict (K035)
+reka print: porogaramu_ntoya = tangaza_amakuru
 ```
 
 ## Built-in names

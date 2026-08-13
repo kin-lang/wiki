@@ -11,7 +11,7 @@ A **_Kin_** function is executed when "something" invokes it (calls it).
 Ex
 
 ```Kin
-porogaramu_ntoya function(a, b) {
+porogaramu_ntoya multiply(a: umubare, b: umubare): umubare {
   tanga a * b
 }
 ```
@@ -22,13 +22,11 @@ A **_Kin_** function is defined with the `porogaramu_ntoya` keyword, followed by
 
 Function names can contain letters, digits, and underscores (same rules as variables). They must start with a letter or `_`. `$` is not allowed.
 
-The parentheses may include parameter names separated by commas:
-(parameter1, parameter2, ...)
-
-The code to be executed, by the function, is placed inside curly brackets: {}
+The parentheses may include parameters separated by commas. Each parameter may
+have a **type annotation**. After `)` you may write a **return type**:
 
 ```Kin
-porogaramu_ntoya name(parameter1, parameter2, parameter3) {
+porogaramu_ntoya name(parameter1: umubare, parameter2: ijambo): ijambo {
   # code to be executed
 }
 ```
@@ -36,6 +34,8 @@ porogaramu_ntoya name(parameter1, parameter2, parameter3) {
 Function parameters are listed inside the parentheses () in the function definition.
 
 Function arguments are the values received by the function when it is invoked.
+If a parameter is annotated, Kin checks the argument type at **call time**.
+If a return type is annotated, Kin checks the value from `tanga`.
 
 Inside the function, the arguments (the parameters) behave as local variables.
 
@@ -56,13 +56,13 @@ If the function was invoked from a statement, **_Kin_** will return to execute t
 Functions often compute a return value. That value is given back to the caller:
 
 ```Kin
-porogaramu_ntoya myFunction(a, b) {
+porogaramu_ntoya myFunction(a: umubare, b: umubare): umubare {
   # Function returns the product of a and b
   tanga a * b
 }
 
 # Function is called, the return value will end up in x
-reka x = myFunction(4, 3)
+reka x: umubare = myFunction(4, 3)
 ```
 
 > Statements after `tanga` in the same function are **not executed**. `tanga` leaves the function immediately.

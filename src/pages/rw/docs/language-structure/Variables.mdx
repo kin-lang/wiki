@@ -47,14 +47,23 @@ ntahinduka x; # Bizatera ikibazo
 ## Ubwoko bw'ihinduragaciro
 
 Ushobora gushyira **ikirango cy'ubwoko** nyuma y'izina ry'ihinduragaciro.
-Ibyo bituma **kugenzura ubwoko** mu gihe porogaramu ikora (igihe utangaza no
-iyo uhindura agaciro), iyo ubwoko bugenewe bukora (uburyo bw'ibanze: `on`).
+Ubwoko **butajyanywe** — butokenizwa, buparswa, kandi bugenzurwa igihe
+porogaramu ikora (igihe utangaza no iyo uhindura agaciro).
 
 ```Kin
-reka age: number = 25
-reka name: string = "Keza"
-ntahinduka PI: number = 3.14
+reka age: umubare = 25
+reka name: ijambo = "Keza"
+ntahinduka PI: umubare = 3.14
 ```
+
+Iyo ubwoko butahuza n'agaciro, haba ikosa:
+
+```Kin
+reka name: ijambo = 42
+# Ntushobora guha umubare kuri ijambo, byari biteganyijwe ijambo
+```
+
+Iminduragaciro **idafite** ikirango ikomeza guhinduka (dynamic).
 
 ### Ubwoko ngombwa n'ubwoko bushoboka
 
@@ -64,33 +73,18 @@ ntahinduka PI: number = 3.14
 | `: type?` | **Bishoboka** — agaciro gashobora kuba ubwo ubwoko **cyangwa** `ubusa` |
 
 ```Kin
-reka score: number = 10     # umubare ngombwa
-reka maybe: number? = ubusa # umubare ushobora kuba ubusa
-reka later: string?;        # string ishoboka, itangira nk'ubusa
+reka score: umubare = 10     # umubare ngombwa
+reka maybe: umubare? = ubusa # umubare ushobora kuba ubusa
+reka later: ijambo?;         # ijambo rishoboka, ritangira nk'ubusa
 ```
 
 ### Amazina y'ubwoko
 
-Amazina yemewe: `number`, `string`, `boolean`, `object`, `urutonde`, `fn`,
-na `native-fn` (ni izina risa na `fn`).
+Amazina yubatsemo (mu Kinyarwanda): `umubare`, `ijambo`, `ukuri`, `ubwoko_imiterere`,
+`urutonde`, `porogaramu_ntoya`, `_porogaramu_ntoya`, na `ubusa`.
 
-**Icyitonderwa:** `ubwoko` ikomeza kugaragaza izina rya `ubwoko`. Imirimo
-yubatsemo nka `tangaza_amakuru` igaragaza `"native-fn"`, naho imirimo ya
-ukoresha igaragaza `"fn"`. Mu kirango cy'ubwoko, `fn` ikubiyemo **byombi**.
-
-### Gukoresha cyangwa guhagarika kugenzura ubwoko
-
-| Uburyo | Icyo bisobanura |
-|--------|-----------------|
-| `on` (ibanze) | Iminduragaciro ifite ikirango igenzurwa; idafite ikomeza guhinduka |
-| `off` | Nta kugenzura — ibirango by'ubwoko ntibikoreshwa |
-| `strict` | Buri `reka` / `ntahinduka` **igomba** kugira ikirango cy'ubwoko |
-
-Ushobora gushyira uburyo mu:
-
-1. CLI: `kin run --types off dosiye.kin` cyangwa `--types strict`
-2. Mu dosiye: `# kin-types: off` cyangwa `# kin-types: strict`
-3. Env: `KIN_TYPES=off` cyangwa `KIN_TYPES=strict`
+Ushobora kandi gukoresha amazina ya **`ubwoko`** (ubwoko_imiterere, union, `Fata`).
+Reba [Ubwoko bw'Amakuru](/rw/docs/language-structure/Data-types).
 
 ## Amazina yubatsemo
 

@@ -49,9 +49,9 @@ ntahinduka cars = ["Saab", "Volvo", "BMW"]
 
 > **Icyitonderwa:** Ihinduragaciro ya **_Kin_** **idafite ikirango cy'ubwoko** ishobora gufata ubwoko ubwo ari bwo bwose bw'amakuru.
 
-## Ubwoko bwa Kin bushobora guhinduka
+## Ubwoko bwa Kin bushobora guhinduka (niba nta kirango)
 
-**_Kin_** ifite **ubwoko buhinduka**, bisobanuye ko ihinduragaciro **ritagize ubwoko** rishobora gufata ubwoko butandukanye bw'amakuru:
+**_Kin_** ifite **ubwoko buhinduka** ku minduragaciro **idafite** ikirango:
 
 ```Kin
 reka x;       # Ubu x ni ubusa. Akadomo `;` ni ngombwa iyo utatanze agaciro.
@@ -59,9 +59,38 @@ x = 5         # Ubu x ni Umubare
 x = "John"    # Ubu x ni Ijambo
 ```
 
-Ushobora **guhitamo** gushyira ikirango cy'ubwoko (`: type` cyangwa `: type?`),
-ukanagenzura ukoresheje `# kin-types: on|off|strict`. Reba
-[Iminduragaciro](/rw/docs/language-structure/Variables).
+Ushobora **guhitamo** gushyira ikirango cy'ubwoko (`: type` cyangwa `: type?`).
+Ubwoko butokenizwa kandi buparswa (ntibujyanywe) kandi bugenzurwa igihe porogaramu ikora.
+Reba [Iminduragaciro](/rw/docs/language-structure/Variables).
+
+## Amazina y'ubwoko (`ubwoko`)
+
+Ushobora gutangaza ubwoko ufite izina ukoresheje `ubwoko`. Iryo jambo rirakoreshwa
+kandi nka umumaro: `ubwoko(x)` isubiza izina ry'ubwoko (urugero `"umubare"`).
+
+Bishyigikira `ubwoko_imiterere`, unions, `Fata`, n’ubwoko bujya mu bindi:
+
+```Kin
+ubwoko Address = {
+  city: ijambo,
+  street: ijambo
+}
+
+ubwoko Person = {
+  name: ijambo,
+  age: umubare,
+  address: Address
+}
+
+ubwoko Id = ijambo | umubare
+ubwoko PersonName = Fata<Person, "name">
+
+reka keza: Person = {
+  name: "Keza",
+  age: 20,
+  address: { city: "Kigali", street: "KG 1" }
+}
+```
 
 ## Interuro/Ijambo muri Kin (Strings)
 
