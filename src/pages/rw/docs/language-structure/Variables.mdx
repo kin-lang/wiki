@@ -44,11 +44,11 @@ ntahinduka x = 10
 ntahinduka x; # Bizatera ikibazo
 ```
 
-## Ubwoko bw'ihinduragaciro (optional type annotations)
+## Ubwoko bw'ihinduragaciro
 
-Ushobora gushyira **ubwoko** nyuma y'izina ry'ihinduragaciro. Ibyo bituma
-**kugenzura ubwoko** mu gihe porogaramu ikora (igihe utangaza no iyo uhindura
-agaciro). Izina ritagize ubwoko rikomeza kuba rishobora guhindura ubwoko.
+Ushobora gushyira **ikirango cy'ubwoko** nyuma y'izina ry'ihinduragaciro.
+Ibyo bituma **kugenzura ubwoko** mu gihe porogaramu ikora (igihe utangaza no
+iyo uhindura agaciro), iyo ubwoko bugenewe bukora (by default `on`).
 
 ```Kin
 reka age: number = 25
@@ -69,12 +69,28 @@ reka maybe: number? = ubusa # umubare ushobora kuba ubusa
 reka later: string?;        # string ishoboka, itangira nk'ubusa
 ```
 
-Amazina y'ubwoko ahuza n'ibyo `ubwoko` isubiza:
+### Amazina y'ubwoko
 
-- `number`, `string`, `boolean`, `object`, `urutonde`, `fn`
+Amazina yemewe: `number`, `string`, `boolean`, `object`, `urutonde`, `fn`,
+na `native-fn` (ni synonym ya `fn`).
 
-> **Kugenzura ubwoko ni guhitamo kuri buri ihinduragaciro.** Amatangazo
-> nta annotation akomeza kwemera ubwoko ubwo ari bwo bwose.
+**Icyitonderwa:** `ubwoko` ikomeza kugaragaza izina rya runtime. Imirimo
+yubatsemo nka `tangaza_amakuru` igaragaza `"native-fn"`, naho imirimo ya
+ukoresha igaragaza `"fn"`. Mu kirango cy'ubwoko, `fn` ikubiyemo **byombi**.
+
+### Gukoresha cyangwa guhagarika kugenzura ubwoko
+
+| Uburyo | Icyo bisobanura |
+|--------|-----------------|
+| `on` (default) | Iminduragaciro ifite ikirango igenzurwa; idafite ikomeza guhinduka |
+| `off` | Nta kugenzura — ibirango by'ubwoko ntibikoreshwa |
+| `strict` | Buri `reka` / `ntahinduka` **igomba** kugira ikirango cy'ubwoko |
+
+Ushobora gushyira uburyo mu:
+
+1. CLI: `kin run --types off dosiye.kin` cyangwa `--types strict`
+2. Mu dosiye: `# kin-types: off` cyangwa `# kin-types: strict`
+3. Env: `KIN_TYPES=off` cyangwa `KIN_TYPES=strict`
 
 ## Amazina yubatsemo
 

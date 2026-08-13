@@ -47,8 +47,8 @@ ntahinduka x; # This will throw an error
 ## Optional type annotations
 
 You can attach a **type annotation** after the variable name. That turns on
-**runtime type checks** for that binding only (at declaration and on every
-later assignment). Names without an annotation stay fully dynamic.
+**runtime type checks** for that binding (at declaration and on every later
+assignment), when type safety is enabled (the default).
 
 ```Kin
 reka age: number = 25
@@ -69,24 +69,40 @@ reka maybe: number? = ubusa # optional number (null allowed)
 reka later: string?;        # optional string, starts as ubusa
 ```
 
-Built-in type names match what `ubwoko` reports:
+### Annotation type names
 
-- `number`, `string`, `boolean`, `object`, `urutonde` (arrays), `fn` (user or built-in functions)
+Allowed names: `number`, `string`, `boolean`, `object`, `urutonde` (arrays),
+`fn`, and `native-fn` (a synonym of `fn`).
+
+**Note:** `ubwoko` still reports the raw runtime tag. Built-in functions such as
+`tangaza_amakuru` print as `"native-fn"`, while user functions print as `"fn"`.
+Annotations use `fn` for **both** (and accept writing `: native-fn` as well).
 
 ```Kin
 reka list: urutonde = [1, 2, 3]
-reka print: fn = tangaza_amakuru
-
-# Wrong type → TypeError (K033)
-# reka x: number = "nope"
-
-# Required type with no value → TypeError (K034)
-# reka y: number;
+reka print: fn = tangaza_amakuru   # also: reka print: native-fn = tangaza_amakuru
+tangaza_amakuru(ubwoko(print))     # prints: native-fn
 ```
 
-> **Type safety is opt-in per variable.** Unannotated variables still accept any
-> type over their lifetime. A future release may add a file-level switch to
-> require annotations everywhere.
+### Enable / disable type safety (file or global)
+
+| Mode | Meaning |
+|------|---------|
+| `on` (default) | Annotated bindings are checked; unannotated stay dynamic |
+| `off` | Type safety off — annotations are ignored |
+| `strict` | Every `reka` / `ntahinduka` **must** have a type annotation |
+
+Set the mode in any of these ways (highest priority first):
+
+1. CLI: `kin run --types off file.kin` or `kin run --types strict file.kin`
+2. File directive (special comment): `# kin-types: off` or `# kin-types: strict`
+3. Environment: `KIN_TYPES=off` or `KIN_TYPES=strict`
+
+```Kin
+# kin-types: strict
+reka age: number = 25   # required
+# reka x = 1            # error under strict (K035)
+```
 
 ## Built-in names
 
