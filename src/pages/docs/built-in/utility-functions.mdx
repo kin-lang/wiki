@@ -24,20 +24,29 @@ A mutable global, initially `ubusa`. It is reserved as an error holder. The runt
 
 # Methods
 
-## `ubwoko()`
+## `ubwoko` (prefix type operator)
 
-Returns the Kin **runtime type name** of its argument as a string: `"number"`, `"string"`, `"boolean"`, `"object"`, `"urutonde"` (arrays), `"fn"`, `"native-fn"`, or `"null"`.
+`ubwoko` is a **keyword / prefix operator** (tighter than binary operators). It returns a **type value**, not a string:
+
+- For primitives and plain objects/arrays/functions: a shared type tag so identity comparisons work (`ubwoko 5 == ubwoko 10`).
+- For class instances: the class value itself (`ubwoko keza == Umuntu`).
+- User functions and builtins share one function type value.
+- Parenthesized form `ubwoko(x)` is still valid.
+
+When printed, type values show names such as `number`, `string`, `urutonde`, `fn`, `class`.
 
 Ex:
 
 ```Kin
 reka x = 5
-tangaza_amakuru(ubwoko(x))
-tangaza_amakuru(ubwoko([1, 2]))
+tangaza_amakuru(ubwoko x)
+tangaza_amakuru(ubwoko [1, 2])
+tangaza_amakuru(ubwoko 5 == ubwoko 10)
 ```
 
-> Prints `number`, then `urutonde`.
+> Prints `number`, then `urutonde`, then `nibyo`.
 
+See also [Classes (OOP)](/docs/language-structure/Classes).
 ## `sisitemu()`
 
 Runs a host-shell command and returns its trimmed stdout as a string.

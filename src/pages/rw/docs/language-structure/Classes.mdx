@@ -1,0 +1,41 @@
+---
+title: Imiterere (OOP)
+---
+
+# Imiterere (OOP)
+
+Kin ifite uburyo bwo gukoresha **imiterere** (classes), instances, imirimo (methods), `rusange` / `bwite`, n’umwanduro umwe (`ikomoka`).
+
+Ingero zuzuye ziboneka muri `examples/oop/` mu repository ya Kin.
+
+## Amagambo y’ingenzi
+
+| Ijambo | Icyo rikora |
+| --- | --- |
+| `imiterere` | Gutangaza imiterere |
+| `tegura` | Constructor |
+| `rema` | Gukora instance |
+| `_` | Instance iri gukoreshwa (muri tegura / methods gusa) |
+| `rusange` | Public |
+| `bwite` | Private |
+| `ikomoka` | Umwanduro (inheritance) |
+
+## Urugero
+
+```Kin
+imiterere Umuntu {
+  tegura(izina, imyaka) {
+    rusange _.izina = izina
+    rusange _.imyaka = imyaka
+  }
+
+  rusange porogaramu_ntoya kwibwira() {
+    tangaza_amakuru("Nitwa ", _.izina)
+  }
+}
+
+reka keza = rema Umuntu("Keza", 20)
+keza.kwibwira()
+```
+
+Soma version y’Icyongereza: [Classes (OOP)](/docs/language-structure/Classes).
