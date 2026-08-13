@@ -1,0 +1,105 @@
+---
+title: Classes (OOP)
+---
+
+# Classes (`imiterere`)
+
+Kin supports a first-slice object-oriented model with classes, instances, methods, visibility, and single inheritance.
+
+Sample programs live in the language repo under `examples/oop/`.
+
+## Keywords
+
+| Keyword | Role |
+| --- | --- |
+| `imiterere` | Declare a class (bound as a constant) |
+| `tegura` | Constructor |
+| `rema` | Create an instance |
+| `_` | Current instance (only inside `tegura` / methods) |
+| `rusange` | Public field or method |
+| `bwite` | Private field or method |
+| `ikomoka` | Single inheritance (`Child ikomoka Parent`) |
+
+## Declare and construct
+
+```Kin
+imiterere Umuntu {
+  tegura(izina, imyaka) {
+    rusange _.izina = izina
+    rusange _.imyaka = imyaka
+  }
+
+  rusange porogaramu_ntoya kwibwira() {
+    tangaza_amakuru("Nitwa ", _.izina, ", mfite imyaka ", _.imyaka)
+  }
+
+  rusange porogaramu_ntoya izina_ryose() {
+    tanga _.izina
+  }
+}
+
+reka keza = rema Umuntu("Keza", 20)
+keza.kwibwira()
+tangaza_amakuru(keza.izina_ryose())
+```
+
+### Field rules
+
+- Fields exist only after a **visibility-prefixed** assignment in `tegura`:
+  `rusange _.name = expr` or `bwite _.name = expr`.
+- Later, methods update existing fields with `_.name = expr` (no modifier).
+- You cannot invent new fields outside `tegura`.
+
+### Methods
+
+- Every class method needs `rusange` or `bwite` before `porogaramu_ntoya`.
+- Accessing `instance.method` returns a **bound method** — the receiver (`_`) is kept if you store and call later.
+- Field names take precedence over methods on the same name (avoid reusing a field name as a method name).
+- Freestanding `porogaramu_ntoya` functions (including nested helpers) do **not** inherit private access, even when called from a method.
+
+```Kin
+reka f = keza.kwibwira
+f()
+```
+
+## Visibility
+
+- `rusange` members are readable, writable, and callable from anywhere.
+- `bwite` members are only visible inside methods / `tegura` of the **class that declared them**.
+- Public methods may wrap private helpers.
+
+## Inheritance
+
+```Kin
+imiterere Umwarimu ikomoka Umuntu {
+  rusange porogaramu_ntoya kwibwira() {
+    tangaza_amakuru("Ndi umwarimu, nitwa ", _.izina)
+  }
+}
+
+reka m = rema Umwarimu("Keza", 28)
+```
+
+- Single parent only (`ikomoka`).
+- Method lookup starts on the instance’s class and walks parents upward.
+- A child with **no** `tegura` inherits the parent constructor.
+- A child `tegura` **fully replaces** the parent constructor (no automatic parent call).
+
+## Types with `ubwoko`
+
+`ubwoko` is a **prefix operator** that yields a type value (not a string name for identity checks):
+
+```Kin
+tangaza_amakuru(ubwoko keza == Umuntu)   # nibyo
+tangaza_amakuru(ubwoko 5 == ubwoko 10)   # nibyo
+tangaza_amakuru(ubwoko 5 == ubwoko "5")  # sibyo
+```
+
+- `ubwoko` of an instance is the **class value** (exact match; no ancestor walk).
+- User functions and builtins share one function type value.
+- Parenthesized form `ubwoko(x)` still works.
+
+## Plain objects vs classes
+
+Object literals (`{ izina: "K" }`) remain quick bags of values.  
+`imiterere` is a named shape with fixed fields and methods.
