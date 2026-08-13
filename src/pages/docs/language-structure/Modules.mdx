@@ -1,0 +1,97 @@
+---
+title: Modules & Imports
+---
+
+# Multi-file programs (`koresha`)
+
+Kin programs can be split across files. A module **exports** selected names;
+another file **imports** them as a **namespace object** with an alias.
+
+Sample programs: `examples/importing/` in the language repository.
+
+## Keywords
+
+| Keyword | Role |
+| --- | --- |
+| `koresha` | Import a module file |
+| `nka` | Alias for the imported namespace (like English *as*) |
+| `emerera_gukoresha` | List names this file exports |
+
+## Exporting
+
+In a library file, define names then list them:
+
+```Kin
+porogaramu_ntoya guteranya(a: umubare, b: umubare): umubare {
+  tanga a + b
+}
+
+ntahinduka THRESHOLD: umubare = 0.05
+
+emerera_gukoresha {
+  guteranya,
+  THRESHOLD
+}
+```
+
+- Only names listed in `emerera_gukoresha` are visible to importers.
+- You may export variables, functions, and classes (`imiterere`).
+- Exporting a name that is not defined raises **K046**.
+
+## Importing
+
+```Kin
+koresha "./methods.kin" nka arithmeticMethods
+koresha "./constants.kin" nka constants
+
+reka x: umubare = arithmeticMethods.guteranya(2, 3) + constants.THRESHOLD
+tangaza_amakuru(x)
+```
+
+- Path is relative to the **importing** file (or an absolute path).
+- `nka alias` binds a **constant** object whose properties are the exports.
+- Access exports with `alias.name` (not bare names from the other file).
+- Trailing `;` is optional.
+- Each absolute path is loaded **once** per run (side effects do not re-run).
+- Circular imports raise **K045**. Missing file raises **K044**.
+
+## Classes and types
+
+Exported classes are values on the namespace and can be constructed with `rema`:
+
+```Kin
+# person.kin
+imiterere Umuntu {
+  tegura(izina: ijambo, imyaka: umubare) {
+    rusange _.izina = izina
+    rusange _.imyaka = imyaka
+  }
+  rusange porogaramu_ntoya kwibwira() {
+    tangaza_amakuru("Nitwa ", _.izina)
+  }
+}
+emerera_gukoresha { Umuntu }
+```
+
+```Kin
+# main.kin
+koresha "./person.kin" nka people
+
+reka keza: Umuntu = rema people.Umuntu("Keza", 20)
+keza.kwibwira()
+tangaza_amakuru(ubwoko keza == people.Umuntu)
+```
+
+- Use `rema people.Umuntu(...)` for the value.
+- The class type is also registered under the bare name `Umuntu` for annotations when imported.
+- Structural type aliases (`ubwoko Person = { … }`) can be exported the same way if listed.
+
+## Nested imports
+
+If `lib/mid.kin` contains `koresha "./deep.kin" nka d`, the path is resolved relative to `lib/`, not relative to the original entry file.
+
+## Notes
+
+- Prefer small modules with explicit `emerera_gukoresha` lists and a clear entry file.
+- `kin check` parses a single file; it does not follow `koresha` dependencies yet.
+- This design is **namespace imports**, not dumping the whole module into the global environment.
